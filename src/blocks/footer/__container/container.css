@@ -1,0 +1,7 @@
+.footer__container {
+    display: flex;
+    max-width: 1235px;
+    margin: 0px auto;
+    padding: 33px 106px 25px 104px;
+    justify-content: space-between;
+  }

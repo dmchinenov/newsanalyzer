@@ -1,0 +1,10 @@
+.footer__socialblock-link {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 27px 0px 0px;
+  padding: 0px;
+}
+.footer__socialblock-link:last-child {
+  margin: 0px;
+}

@@ -1,0 +1,14 @@
+@import url('./__analytics/analytics.css');
+@import url('./__arrow/arrow.css');
+@import url('./__button/button.css');
+@import url('./__cardcontainer/cardcontainer.css');
+@import url('./__checkanalytics/checkanalytics.css');
+@import url('./__header/header.css');
+@import url('./__resultsearch/resultsearch.css');
+
+.main {
+    background: #f5f6f7;
+    padding: 80px 104px 80px 104px;
+    max-width: 100%;
+  }
+  

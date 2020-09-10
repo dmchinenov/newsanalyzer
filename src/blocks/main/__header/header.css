@@ -1,0 +1,9 @@
+.main__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    vertical-align: middle;
+    padding-bottom: 64px;
+    max-width: 1235px;
+    margin: auto;
+  }

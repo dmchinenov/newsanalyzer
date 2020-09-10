@@ -1,0 +1,12 @@
+@import url('./__container/container.css');
+@import url('./__photo/photo.css');
+@import url('./__text/text.css');
+@import url('./__textblock/textblock.css');
+@import url('./__title/title.css');
+
+.author {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    background: #ffffff;
+  }

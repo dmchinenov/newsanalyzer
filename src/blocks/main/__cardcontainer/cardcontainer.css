@@ -1,0 +1,9 @@
+.main__cardcontainer {
+    max-width: 1235px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 16px 16px;
+    margin: auto;
+    justify-content: center;
+    padding: 0px 0px 48px 0px;
+  }

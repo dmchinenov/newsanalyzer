@@ -1,0 +1,16 @@
+@import url('./__author/author.css');
+@import url('./__content/content.css');
+@import url('./__date/date.css');
+@import url('./__image/image.css');
+@import url('./__text/text.css');
+@import url('./__title/title.css');
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+    min-height: 576px;
+    background: #ffffff;
+    border-radius: 15px;
+  }

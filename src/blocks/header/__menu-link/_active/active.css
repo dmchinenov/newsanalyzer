@@ -1,0 +1,5 @@
+.header__menu-link_active {
+    color: #ffffff;
+    padding-bottom: 23px;
+    border-bottom: 3px solid white;
+  }
