@@ -1,11 +1,19 @@
 .main__checkanalytics {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
-    align-items: center;
-    text-align: center;
-    color: #1a1b22;
-    margin: auto 0px;
-  }
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  color: #1a1b22;
+  margin: auto 0px;
+  text-decoration: none;
+}
+.main__checkanalytics:after {
+  content: "";
+  width: 9px;
+  height: 14px;
+  margin: 0px 0px 0px 10px;
+  background-image: url(../../../images/strelka.svg);
+}
