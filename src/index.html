@@ -37,7 +37,7 @@
             <p class="search__subtitle">Введите в&nbsp;поиске любую тему и&nbsp;узнайте, насколько популярной она
                 была в&nbsp;новостях за&nbsp;прошедшую неделю.</p>
             <form class="search__form" novalidate>
-                <input type="text" class="search__input" placeholder="Введите тему новости">
+                <input type="text" class="search__input" required placeholder="Введите тему новости">
                 <button class="search__button">Искать</button>
             </form>
         </div>
@@ -62,10 +62,10 @@
             <h2 class="main__resultsearch">Результаты поиска</h2>
             <a href="" class="main__analytics">
                 <p class="main__checkanalytics">Посмотреть аналитику</p>
-                <img class="main__arrow" src="<%=require('./images/arrow.svg').default%>">
+                <img class="main__arrow" src="<%=require('./images/arrow.svg').default%>" alt="Стрелка">
             </a>
         </div>
-        <ul class="main__cardcontainer">
+        <div class="main__cardcontainer">
             <div class="card">
                 <a href="" class="card__content">
                     <div class="card__image"></div>
@@ -77,55 +77,23 @@
                 </a>
                 <a href="" class="card__author">Лента.ру</a>
             </div>
-            <div class="card">
-                <a href="" class="card__content">
-                    <div class="card__image"></div>
-                    <p class="card__date">2 августа, 2019</p>
-                    <h3 class="card__title">Национальное достояние – парки</h3>
-                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                        складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
-                        приобщиться к природе.</p>
-                </a>
-                <a href="" class="card__author">Лента.ру</a>
-            </div>
-            <div class="card">
-                <a href="" class="card__content">
-                    <div class="card__image"></div>
-                    <p class="card__date">2 августа, 2019</p>
-                    <h3 class="card__title">Национальное достояние – парки</h3>
-                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                        складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
-                        приобщиться к природе.</p>
-                </a>
-                <a href="" class="card__author">Лента.ру</a>
-            </div>
-            <div class="card">
-                <a href="" class="card__content">
-                    <div class="card__image"></div>
-                    <p class="card__date">2 августа, 2019</p>
-                    <h3 class="card__title">Национальное достояние – парки</h3>
-                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                        складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
-                        приобщиться к природе.</p>
-                </a>
-                <a href="" class="card__author">Лента.ру</a>
-            </div>
-        </ul>
+        </div>
         <button class="main__button">Показать ещё</button>
     </section>
 
     <!-- about author-->
     <section class="author">
         <div class="author__container">
-            <img class="author__photo" src="<%=require('./images/avatar.webp').default%>" alt="Author photo"></img>
+            <img class="author__photo" src="<%=require('./images/avatar.webp').default%>" alt="Author photo">
             <div class="author__textblock">
                 <h2 class="author__title">Об авторе</h2>
-                <p class="author__text">Привет!</p>
-                <p class="author__text">Меня зовут Дмитрий, и&nbsp;этим проектом я&nbsp;завершаю своё обучение
-                    в&nbsp;школе Яндекс.Практикум.</p>
-                <p class="author__text">Данный сайт умеет искать и&nbsp;анализировать новости,
+                <p class="author__text">Привет!<br>
+                    Меня зовут Дмитрий, и&nbsp;этим проектом я&nbsp;завершаю своё обучение
+                    в&nbsp;школе Яндекс.Практикум.<br>
+                    Данный сайт умеет искать и&nbsp;анализировать новости,
                     он&nbsp;адаптирован
-                    под различные браузеры и разрешения. Надеюсь, вам понравится его функционал.</p>
+                    под различные браузеры и разрешения. Надеюсь, вам понравится его функционал.
+                </p>
             </div>
         </div>
     </section>

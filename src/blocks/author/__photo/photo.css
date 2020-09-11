@@ -3,4 +3,14 @@
     max-height: 464px;
     margin: 0px;
     border-radius: 50%;
+    display: block;
+
+  }
+
+  @media screen and (max-width: 1200px) {
+    .author__photo {
+      max-width: 300px;
+      max-height: 300px;
+      align-self: center;
+    }
   }
