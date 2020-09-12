@@ -2,6 +2,7 @@
 @import url("./__logo/logo.css");
 @import url("./__menu-link/menu-link.css");
 @import url("./__menu-link/_active/active.css");
+@import url("./__menu-link/_simple/simple.css");
 @import url("./__menu-links/menu-links.css");
 @import url("./__menu/menu.css");
 @import url("./__logo/_black/black.css");
