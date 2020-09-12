@@ -1,0 +1,6 @@
+.slider__navigation {
+  display: flex;
+  width: 300px;
+  margin: auto;
+  justify-content: center;
+}

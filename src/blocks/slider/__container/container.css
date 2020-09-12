@@ -1,0 +1,10 @@
+.slider__container {
+    max-width: 1235px;
+    max-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0px auto;
+    padding: 0px 0px 10px 0px;
+    overflow: hidden;
+  }

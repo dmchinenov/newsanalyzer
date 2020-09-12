@@ -1,0 +1,10 @@
+@import url("./__ghlink/ghlink.css");
+@import url("./__title/title.css");
+@import url("./__header/header.css");
+
+.gh {
+    background: #f5f6f7;
+    padding: 72px 0px 80px 0px;
+    max-width: 100%;
+    margin: auto;
+  }

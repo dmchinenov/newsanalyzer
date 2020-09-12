@@ -1,0 +1,13 @@
+@import url("./__button/button.css");
+@import url("./__button/_left/button_left.css");
+@import url("./__container/container.css");
+@import url("./__nav/nav.css");
+@import url("./__nav/_active/nav_active.css");
+@import url("./__navigation/navigation.css");
+
+.slider {
+  max-width: 1440px;
+  margin: 0px auto;
+  position: relative;
+  padding: 0px 50px 0px 50px;
+}

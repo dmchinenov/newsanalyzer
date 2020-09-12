@@ -1,4 +1,4 @@
-.author__title {
+.tech__title {
   font-family: Roboto Slab;
   font-style: normal;
   font-weight: normal;
@@ -6,5 +6,6 @@
   line-height: 46px;
   color: #1a1b22;
   margin: 0px;
-  padding-bottom: 24px;
+  max-width: 320px;
+  padding: 80px 0px 162px 0px;
 }

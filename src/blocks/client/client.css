@@ -1,0 +1,9 @@
+@import url("../client/__content/content.css");
+@import url("../client/__text/text.css");
+@import url("../client/__titile/title.css");
+
+.client {
+    margin: auto;
+    max-width: 1440px;
+    padding: 160px 0px 94px 0px;
+  }

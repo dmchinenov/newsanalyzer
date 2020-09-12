@@ -1,0 +1,11 @@
+@import url("../tech/__content/content.css");
+@import url("../tech/__logobox/logobox.css");
+@import url("../tech/__logocontainer/logocontainer.css");
+@import url("../tech/__logoname/logoname.css");
+@import url("../tech/__title/title.css");
+
+.tech {
+  max-height: 334px;
+  min-width: 100%;
+  background: #f5f6f7;
+}

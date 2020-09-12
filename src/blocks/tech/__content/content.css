@@ -1,0 +1,8 @@
+.tech__content {
+  margin: 0px auto;
+  padding: 0px 104px 0px 104px;
+  max-width: 1235px;
+  min-height: 334px;
+  display: flex;
+  justify-content: space-between;
+}

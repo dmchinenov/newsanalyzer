@@ -1,0 +1,8 @@
+.gh__header {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    padding: 0px 104px 64px 104px;
+    max-width: 1235px;
+    margin: auto;
+  }
