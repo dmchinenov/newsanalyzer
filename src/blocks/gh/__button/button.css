@@ -1,0 +1,23 @@
+@media all and (min-width: 0px) {
+  .gh__button {
+    background: #f5f6f7;
+    border-radius: 80px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1a1b22;
+    padding: 15px 69px 15px 69px;
+    margin: 24px auto 0px;
+    border: 1px solid #1a1b22;
+    cursor: pointer;
+    outline: none;
+    display: block;
+  }
+}
+@media all and (min-width: 560px) {
+  .gh__button {
+    display: none;
+  }
+}

@@ -1,9 +1,9 @@
 .site-navigator__item::before {
-    content: "/";
-    margin: 0px 0px 0px 5px;
-  }
-  
-  .site-navigator__item:first-of-type::before {
-    content: "";
-    margin: 0px;
-  }
+  content: "/";
+  margin: 0px 0px 0px 5px;
+}
+
+.site-navigator__item:first-of-type::before {
+  content: "";
+  margin: 0px;
+}

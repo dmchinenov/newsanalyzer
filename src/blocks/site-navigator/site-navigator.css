@@ -1,11 +1,28 @@
-@import url('./__item/item.css');
-@import url('./__link/link.css');
-@import url('./__link/_main/main.css');
-@import url('./__linkbox/linkbox.css');
+@import url("./__item/item.css");
+@import url("./__link/link.css");
+@import url("./__link/_main/main.css");
+@import url("./__linkbox/linkbox.css");
 
+@media all and (min-width: 0px) {
+  .site-navigator {
+    display: none;
+  }
+}
 
-.site-navigator {
+@media all and (min-width: 768px) {
+  .site-navigator {
+    margin: auto;
+    max-width: 100%;
+    padding: 96px 0px 64px 0px;
+    display: block;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .site-navigator {
     margin: auto;
     max-width: 100%;
     padding: 120px 0px 80px 0px;
+    display: block;
   }
+}

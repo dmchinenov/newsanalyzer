@@ -4,8 +4,9 @@
 @import url("../tech/__logoname/logoname.css");
 @import url("../tech/__title/title.css");
 
-.tech {
-  max-height: 334px;
-  min-width: 100%;
-  background: #f5f6f7;
+@media all and (min-width: 0px) {
+  .tech {
+    min-width: 100%;
+    background: #f5f6f7;
+  }
 }

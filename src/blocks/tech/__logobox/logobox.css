@@ -1,6 +1,15 @@
-.tech__logobox {
-    max-height: 153px;
-    max-width: 120px;
-    margin: 0px 0px 0px 72px;
-    padding: 93px 0px 97px 0px;
+@media all and (min-width: 0px) {
+  .tech__logobox {
+    height: 153px;
+    width: 92px;
+    padding: 0px;
+    text-align: center;
+    margin: 0px auto;
   }
+}
+
+@media all and (min-width: 500px) {
+  .tech__logobox {
+    margin: 0px;
+  }
+}

@@ -10,9 +10,11 @@
 @import url("./__numbers/numbers.css");
 @import url("./__title/title.css");
 
-.stats {
-  margin: auto;
-  max-width: 100%;
-  padding: 0px 104px 76px 104px;
-  background: #f5f6f7;
+@media all and (min-width: 0px) {
+  .stats {
+    margin: auto;
+    max-width: 100%;
+    padding: 0px;
+    background: #f5f6f7;
+  }
 }

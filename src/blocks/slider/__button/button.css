@@ -1,18 +1,27 @@
-.slider__button {
-  min-width: 40px;
-  min-height: 40px;
-  position: absolute;
-  cursor: pointer;
-  background-image: url(../../../images/arrowright.svg);
-  background-position: center;
-  top: 35%;
-  left: 24px;
-  right: auto;
-  transition: 0.5s;
-  z-index: 2;
-}
-
 .slider__button:hover {
   transform: scale(1.1);
   transition: 0.5s;
+}
+
+@media all and (min-width: 0px) {
+  .slider__button {
+    min-width: 40px;
+    min-height: 40px;
+    position: absolute;
+    cursor: pointer;
+    background-image: url(../../../images/arrowright.svg);
+    background-position: center;
+    top: 35%;
+    left: 24px;
+    right: auto;
+    transition: 0.5s;
+    z-index: 2;
+    display: none;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .slider__button {
+    display: block;
+  }
 }

@@ -1,23 +1,21 @@
-
-  @media all and (min-width: 0px) {
-    .card__author {
-      font-family: Roboto Slab;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 20px;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-      color: #b6bcbf;
-      padding: 0px 0px 0px 16px;
-      text-decoration: none;
-      margin: 0px 0px 16px 0px;
-    }
+@media all and (min-width: 0px) {
+  .card__author {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #b6bcbf;
+    padding: 0px 0px 0px 16px;
+    text-decoration: none;
+    margin: 0px 0px 16px 0px;
   }
+}
 
-  
-  @media all and (min-width: 1024px) {
-    .card__author {
-      padding: 0px 24px 0px 24px;
-    }
+@media all and (min-width: 1024px) {
+  .card__author {
+    padding: 0px 24px 0px 24px;
   }
+}

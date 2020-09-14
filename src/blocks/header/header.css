@@ -9,7 +9,6 @@
 @import url("./__menu-link/_black-active/black-active.css");
 @import url("./_header-white/header-white.css");
 
-
 @media all and (min-width: 0px) {
   .header {
     position: absolute;
@@ -30,4 +29,3 @@
     height: 80px;
   }
 }
-

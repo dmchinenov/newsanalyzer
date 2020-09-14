@@ -1,4 +1,5 @@
-.client__text {
+@media all and (min-width: 0px) {
+  .client__text {
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
@@ -6,5 +7,12 @@
     line-height: 24px;
     color: #1a1b22;
     margin: 0px;
+    padding-top: 16px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .client__text {
     padding-top: 24px;
   }
+}

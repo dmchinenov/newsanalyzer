@@ -1,6 +1,8 @@
-.slider__navigation {
-  display: flex;
-  width: 300px;
-  margin: auto;
-  justify-content: center;
+@media all and (min-width: 0px) {
+  .slider__navigation {
+    display: flex;
+    width: 300px;
+    margin: 16px auto 0px;
+    justify-content: center;
+  }
 }

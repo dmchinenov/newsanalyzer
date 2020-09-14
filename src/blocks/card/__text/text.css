@@ -17,17 +17,6 @@
 
 @media all and (min-width: 1024px) {
   .card__text {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    color: #1a1b22;
-    margin: 0px;
     padding: 16px 24px 0px 24px;
-    -webkit-line-clamp: 4;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow-y: hidden;
   }
 }

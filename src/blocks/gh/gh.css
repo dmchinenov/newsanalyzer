@@ -1,10 +1,25 @@
 @import url("./__ghlink/ghlink.css");
 @import url("./__title/title.css");
 @import url("./__header/header.css");
+@import url("./__button/button.css");
 
-.gh {
+@media all and (min-width: 0px) {
+  .gh {
     background: #f5f6f7;
-    padding: 72px 0px 80px 0px;
+    padding: 32px 0px 32px 0px;
     max-width: 100%;
     margin: auto;
   }
+}
+
+@media all and (min-width: 768px) {
+  .gh {
+    padding: 40px 0px 40px 0px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .gh {
+    padding: 72px 0px 72px 0px;
+  }
+}

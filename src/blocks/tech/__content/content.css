@@ -1,8 +1,17 @@
-.tech__content {
-  margin: 0px auto;
-  padding: 0px 104px 0px 104px;
-  max-width: 1235px;
-  min-height: 334px;
-  display: flex;
-  justify-content: space-between;
+@media all and (min-width: 0px) {
+  .tech__content {
+    margin: 0px auto;
+    padding: 32px 0px 49px 0px;
+    max-width: 90%;
+    display: block;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .tech__content {
+    display: flex;
+    padding: 80px 104px 97px 104px;
+    justify-content: space-between;
+    max-width: 1235px;
+  }
 }

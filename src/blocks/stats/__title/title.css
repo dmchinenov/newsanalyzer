@@ -1,10 +1,25 @@
-.stats__title {
+@media all and (min-width: 0px) {
+  .stats__title {
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 30px;
     color: #1a1b22;
     margin: 0px;
+    padding: 0px 0px 16px 0px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .stats__title {
+    font-size: 26px;
+    line-height: 30px;
+    padding: 0px 0px 40px 0px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .stats__title {
     padding: 0px 0px 48px 0px;
   }
+}

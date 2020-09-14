@@ -1,9 +1,16 @@
-.slider__container {
+@media all and (min-width: 0px) {
+  .slider__container {
     max-height: 300px;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    margin: 0px auto;
+    margin: 0px auto 0px 16px;
     padding: 0px 0px 10px 0px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .slider__container {
     transform: translateX(-300px);
   }
+}

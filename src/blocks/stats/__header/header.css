@@ -1,7 +1,9 @@
-.stats__header {
-  display: flex;
-  max-width: 1235px;
-  margin: auto;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #1a1b22;
+@media all and (min-width: 0px) {
+  .stats__header {
+    display: flex;
+    max-width: 1235px;
+    margin: auto;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1a1b22;
+  }
 }

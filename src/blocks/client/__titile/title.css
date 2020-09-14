@@ -1,9 +1,18 @@
-.client__title {
+@media all and (min-width: 0px) {
+  .client__title {
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 46px;
+    font-size: 30px;
+    line-height: 40px;
     color: #1a1b22;
     margin: 0px;
   }
+}
+
+@media all and (min-width: 1024px) {
+  .client__title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}

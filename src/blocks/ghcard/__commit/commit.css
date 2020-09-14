@@ -1,4 +1,5 @@
-.ghcard__commit {
+@media all and (min-width: 0px) {
+  .ghcard__commit {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -6,6 +7,20 @@
     line-height: 22px;
     color: #1a1b22;
     margin: 0px;
-    padding: 0px 24px 16px 24px;
-    max-width: 352px;
+    padding: 0px 16px 16px 16px;
+    max-width: 246px;
   }
+}
+
+@media all and (min-width: 768px) {
+  .ghcard__commit {
+    max-width: 300px;
+    padding: 0px 16px 16px 24px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .ghcard__commit {
+    padding: 0px 24px 16px 24px;
+  }
+}

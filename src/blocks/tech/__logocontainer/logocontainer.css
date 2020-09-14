@@ -1,5 +1,25 @@
-.tech__logocontainer {
-    display: flex;
-    max-width: 841px;
-    padding-right: 120px;
+@media all and (min-width: 0px) {
+  .tech__logocontainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-gap: 65px 42px;
+    margin: 0px auto;
+    padding: 0px;
   }
+}
+
+@media all and (min-width: 500px) {
+  .tech__logocontainer {
+    grid-template-columns: repeat(4, minmax(92px, 1fr));
+    grid-gap: 20px 0px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .tech__logocontainer {
+    grid-template-columns: repeat(4, minmax(92px, 1fr));
+    grid-gap: 20px 0px;
+    width: 600px;
+    margin: 0px 50px 0px 0px;
+  }
+}

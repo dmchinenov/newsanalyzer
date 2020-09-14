@@ -1,5 +1,13 @@
-.ghcard__authorbox {
+@media all and (min-width: 0px) {
+  .ghcard__authorbox {
     display: flex;
     justify-content: flex-start;
+    padding: 0px 0px 16px 16px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .ghcard__authorbox {
     padding: 0px 0px 16px 24px;
   }
+}

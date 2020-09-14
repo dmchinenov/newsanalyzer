@@ -2,8 +2,22 @@
 @import url("../client/__text/text.css");
 @import url("../client/__titile/title.css");
 
-.client {
+@media all and (min-width: 0px) {
+  .client {
     margin: auto;
+    padding: 72px 0px 40px 0px;
     max-width: 1440px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .client {
+    padding: 96px 0px 40px 0px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .client {
     padding: 160px 0px 94px 0px;
   }
+}

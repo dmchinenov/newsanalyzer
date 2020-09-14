@@ -6,6 +6,7 @@
 
 @media all and (min-width: 0px) {
   .author {
+    font-family: "Roboto", 'Roboto Slab', sans-serif, Arial;
     display: block;
     background: #ffffff;
     margin: auto;

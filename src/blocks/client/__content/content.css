@@ -1,4 +1,15 @@
-.client__content {
-    max-width: 815px;
-    padding: 0px 104px 0px 104px;
+@media all and (min-width: 0px) {
+  .client__content {
+    margin: 0px auto;
+    padding: 0px 16px 0px 16px;
+    max-width: 90%;
   }
+}
+
+@media all and (min-width: 1024px) {
+  .client__content {
+    padding: 0px 104px 0px 104px;
+    max-width: 815px;
+    margin: 0px;
+  }
+}
