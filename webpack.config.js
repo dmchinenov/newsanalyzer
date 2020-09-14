@@ -9,8 +9,8 @@ const isDev = process.env.NODE_ENV === "development";
 module.exports = {
   entry: {
     index: "./src/pages/index/index.js",
-    about: "./src/pages/analytics/analytics.js",
-    analytics: "./src/pages/about/about.js",
+    about: "./src/pages/about/about.js",
+    analytics: "./src/pages/analytics/analytics.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -26,13 +26,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 
+        use: [
           {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  publicPath: "../",
-                },
-              },
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: "../",
+            },
+          },
           {
             loader: "css-loader",
             options: {

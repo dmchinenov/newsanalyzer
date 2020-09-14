@@ -9,7 +9,6 @@
     <meta name="author" content="Dmitry Chinenov">
     <title>News Analyzer</title>
     <link rel="shortcut icon" href="<%=require('./images/favicon.svg').default%>" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="./pages/index.css"> -->
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 
@@ -41,18 +40,15 @@
             </form>
         </div>
     </section>
-
     <section class="preloader">
         <div class="preloader__search"></div>
         <p class="preloader__searchtext">Идет поиск новостей...</p>
     </section>
-
     <section class="infonotfound">
         <div class="infonotfound__icon"></div>
         <p class="infonotfound__title">Ничего не найдено</p>
         <p class="infonotfound__subtitle">К&nbsp;сожалению по&nbsp;вашему запросу ничего не&nbsp;найдено.</p>
     </section>
-
     <section class="main">
         <div class="main__header">
             <h2 class="main__resultsearch">Результаты поиска</h2>
@@ -92,11 +88,9 @@
                 </a>
                 <a href="" class="card__author">Лента.ру</a>
             </div>
-
         </div>
         <button class="main__button" type="submit">Показать ещё</button>
     </section>
-
     <section class="author">
         <div class="author__container">
             <img class="author__photo" src="<%=require('./images/avatar.webp').default%>" alt="Author photo">
@@ -112,7 +106,6 @@
             </div>
         </div>
     </section>
-
     <footer class="footer">
         <div class="footer__container">
             <p class="footer__authorblock">&#169; 2020 Dmitry Chinenov</p>
@@ -144,6 +137,5 @@
     </footer>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.js %>">
 </body>
-
 
 </html>
