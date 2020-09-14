@@ -1,6 +1,6 @@
 @media all and (min-width: 0px) {
   .request__title {
-    font-family: Roboto Slab;
+    font-family: Roboto Slab, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;

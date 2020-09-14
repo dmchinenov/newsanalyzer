@@ -1,6 +1,6 @@
 @media all and (min-width: 0px) {
   .header__logo {
-    font-family: "Roboto Slab";
+    font-family: Roboto Slab, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
