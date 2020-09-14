@@ -9,7 +9,8 @@
     <meta name="author" content="Dmitry Chinenov">
     <title>News Analyzer</title>
     <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./pages/analytics.css">
+    <!-- <link rel="stylesheet" href="./pages/analytics.css"> -->
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 
 <body class="body">
@@ -131,6 +132,6 @@
             </ul>
         </div>
     </footer>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.js %>">
 </body>
-
 </html>

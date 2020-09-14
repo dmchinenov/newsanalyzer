@@ -8,9 +8,9 @@
     <meta name="description" content="Сервис поиска и анализа новостей">
     <meta name="author" content="Dmitry Chinenov">
     <title>News Analyzer</title>
-    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./pages/index.css">
-    <!-- <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>"> -->
+    <link rel="shortcut icon" href="<%=require('./images/favicon.svg').default%>" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./pages/index.css"> -->
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 
 <body class="body">
@@ -99,7 +99,7 @@
 
     <section class="author">
         <div class="author__container">
-            <img class="author__photo" src="./images/avatar.webp" alt="Author photo">
+            <img class="author__photo" src="<%=require('./images/avatar.webp').default%>" alt="Author photo">
             <div class="author__textblock">
                 <h2 class="author__title">Об авторе</h2>
                 <p class="author__text">Привет!<br>
@@ -142,6 +142,8 @@
             </ul>
         </div>
     </footer>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.js %>">
 </body>
+
 
 </html>

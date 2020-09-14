@@ -1,26 +1,11 @@
-# newsanalyzer
-# npm used :
-gh-pages
-webpack-md5-hash
-webpack
-webpack-cli
-webpack-dev-server
-
-image-webpack-loader
-file-loader
-
-
-babel-loader
-babel-cli
-babel-core
-babel-preset-env
-core-js
-babel-polyfill
-mini-css-extract-plugin
-optimize-css-assets-webpack-plugin
-css-loader
-html-webpack-plugin
-postcss-loader
-autoprefixer
-cssnano
-style-loader
+<h1>News Analyzer</h1>
+***
+<h2> Сервис способен анализировать события за последнюю неделю, 
+искать новости и собирать статистику упоминаний <h2>
+***
+<h2>Версия 0.0.1. Страницы адаптированы под мобильные разрешения<h2>
+***
+<h2>Инструкция по запуску:<h2>
+*Склонируйте репозиторий.
+*Запустите в терминале команду npm i.
+*Запустите сборку командой Npm run dev (на локальном сервере), либо npm run build.
