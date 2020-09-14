@@ -1,5 +1,19 @@
-.header__menu-link_black-active {
-    color: #1A1B22;
+@media all and (min-width: 0px) {
+  .header__menu-link_black-active {
+    color: #1a1b22;
     border-bottom: 3px solid black;
+    padding-bottom: 13px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .header__menu-link_black-active {
+    padding-bottom: 15px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .header__menu-link_black-active {
     padding-bottom: 23px;
+  }
 }

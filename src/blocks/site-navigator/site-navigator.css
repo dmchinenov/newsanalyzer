@@ -1,0 +1,11 @@
+@import url('./__item/item.css');
+@import url('./__link/link.css');
+@import url('./__link/_main/main.css');
+@import url('./__linkbox/linkbox.css');
+
+
+.site-navigator {
+    margin: auto;
+    max-width: 100%;
+    padding: 120px 0px 80px 0px;
+  }

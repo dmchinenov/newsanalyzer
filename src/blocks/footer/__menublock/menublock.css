@@ -1,4 +1,14 @@
-.footer__menublock {
-    margin: 0px;
-    display: flex;
+@media all and (min-width: 0px) {
+  .footer__menublock {
+    margin: 0px 50px 0px 0px;
+    display: block;
+    max-width: 184px;
   }
+}
+@media all and (min-width: 500px) {
+  .footer__menublock {
+    margin: 0px auto;
+    display: flex;
+    max-width: 700px;
+  }
+}

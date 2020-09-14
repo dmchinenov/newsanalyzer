@@ -9,9 +9,25 @@
 @import url("./__menu-link/_black-active/black-active.css");
 @import url("./_header-white/header-white.css");
 
-.header {
-  position: absolute;
-  max-height: 80px;
-  min-width: 100%;
-  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+
+@media all and (min-width: 0px) {
+  .header {
+    position: absolute;
+    height: 56px;
+    min-width: 100%;
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  }
 }
+
+@media all and (min-width: 768px) {
+  .header {
+    height: 64px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .header {
+    height: 80px;
+  }
+}
+

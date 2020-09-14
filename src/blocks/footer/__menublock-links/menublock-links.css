@@ -1,7 +1,16 @@
-.footer__menublock-links {
+@media all and (min-width: 0px) {
+  .footer__menublock-links {
     list-style-type: none;
-    display: flex;
+    display: block;
     justify-content: space-between;
     padding: 0px;
     margin: 0px;
   }
+}
+
+@media all and (min-width: 500px) {
+  .footer__menublock-links {
+    display: flex;
+    margin: 0px 10px 0px 0px;
+  }
+}

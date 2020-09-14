@@ -9,6 +9,7 @@
   left: 24px;
   right: auto;
   transition: 0.5s;
+  z-index: 2;
 }
 
 .slider__button:hover {

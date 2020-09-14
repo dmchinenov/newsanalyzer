@@ -1,4 +1,22 @@
-.card__text {
+@media all and (min-width: 0px) {
+  .card__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1a1b22;
+    margin: 0px;
+    padding: 10px 16px 0px 16px;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .card__text {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -12,3 +30,4 @@
     -webkit-box-orient: vertical;
     overflow-y: hidden;
   }
+}

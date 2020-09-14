@@ -1,15 +1,26 @@
-.main__checkanalytics {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  align-items: center;
-  text-align: center;
-  color: #1a1b22;
-  margin: auto 0px;
-  text-decoration: none;
+@media all and (min-width: 0px) {
+  .main__checkanalytics {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #1a1b22;
+    text-decoration: none;
+    margin: 0px;
+  }
 }
+
+@media all and (min-width: 530px) {
+  .main__checkanalytics {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
 .main__checkanalytics:after {
   content: "";
   width: 9px;

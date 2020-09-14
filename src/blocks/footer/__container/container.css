@@ -1,7 +1,30 @@
-.footer__container {
+@media all and (min-width: 0px) {
+  .footer__container {
     display: flex;
-    max-width: 1235px;
     margin: 0px auto;
-    padding: 33px 106px 25px 104px;
+    padding: 20px 16px 22px 16px;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
+}
+
+@media all and (min-width: 500px) {
+  .footer__container {
+    padding: 20px 16px 22px 16px;
+    flex-direction: column;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .footer__container {
+    padding: 20px 50px 22px 50px;
+    flex-direction: row;
+    max-width: 1235px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .footer__container {
+    padding: 20px 106px 22px 104px;
+  }
+}

@@ -1,5 +1,19 @@
-.header__menu-link_active {
+@media all and (min-width: 0px) {
+  .header__menu-link_active {
     color: #ffffff;
-    padding-bottom: 23px;
+    padding-bottom: 13px;
     border-bottom: 3px solid white;
   }
+}
+
+@media all and (min-width: 768px) {
+  .header__menu-link_active {
+    padding-bottom: 15px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .header__menu-link_active {
+    padding-bottom: 23px;
+  }
+}

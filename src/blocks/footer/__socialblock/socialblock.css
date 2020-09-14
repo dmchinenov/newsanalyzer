@@ -1,5 +1,18 @@
-.footer__socialblock {
+@media all and (min-width: 0px) {
+  .footer__socialblock {
     margin: 0px;
     display: flex;
     padding: 0px;
   }
+}
+
+@media all and (min-width: 500px) {
+  .footer__socialblock {
+    margin: 0px auto;
+  }
+}
+@media all and (min-width: 768px) {
+  .footer__socialblock {
+    margin: 0px;
+  }
+}

@@ -1,0 +1,7 @@
+.site-navigator__linkbox {
+    display: flex;
+    max-width: 1235px;
+    list-style-type: none;
+    margin: 0px auto;
+    padding: 0px 104px 0px 104px;
+  }

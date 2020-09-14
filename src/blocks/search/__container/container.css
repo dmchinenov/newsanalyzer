@@ -1,5 +1,32 @@
-.search__container {
-    max-width: 608px;
+@media all and (min-width: 0px) {
+  .search__container {
+    max-width: 288px;
     margin: auto;
+    padding: 86px 16px 32px 16px;
+    max-width: 288px;
+  }
+}
+
+@media all and (min-width: 480px) {
+  .search__container {
+    max-width: 450px;
+  }
+}
+@media all and (min-width: 768px) {
+  .search__container {
+    padding: 104px 0px 48px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .search__container {
+    max-width: 545px;
     padding: 160px 0px 80px;
   }
+}
+
+@media all and (min-width: 1280px) {
+  .search__container {
+    max-width: 608px;
+  }
+}

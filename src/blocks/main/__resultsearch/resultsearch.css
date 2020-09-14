@@ -1,9 +1,37 @@
-.main__resultsearch {
+@media all and (min-width: 0px) {
+  .main__resultsearch {
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 46px;
+    font-size: 30px;
+    line-height: 34px;
     color: #1a1b22;
+    margin: 0px auto 0px 0px;
+    padding: 0px 0px 16px 0px;
+    max-width: 200px;
+  }
+}
+
+@media all and (min-width: 530px) {
+  .main__resultsearch {
+    max-width: 230px;
+    padding: 0px 0px 16px 0px;
     margin: 0px;
   }
+}
+
+@media all and (min-width: 768px) {
+  .main__resultsearch {
+    max-width: 336px;
+    padding: 0px 0px 0px 0px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .main__resultsearch {
+    max-width: 712px;
+    padding: 0px;
+    font-size: 40px;
+    line-height: 46px;
+  }
+}

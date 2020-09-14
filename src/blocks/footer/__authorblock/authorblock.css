@@ -1,9 +1,27 @@
-.footer__authorblock {
+@media all and (min-width: 0px) {
+  .footer__authorblock {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
     color: #b6bcbf;
+    margin: 0px 50px 0px 0px;
+    padding-top: 40px;
+    order: 1;
+  }
+}
+
+@media all and (min-width: 500px) {
+  .footer__authorblock {
+    margin: 0px auto;
+    padding-top: 20px;
+  }
+}
+@media all and (min-width: 768px) {
+  .footer__authorblock {
+    order: 0;
+    padding-top: 0px;
     margin: 0px;
   }
+}

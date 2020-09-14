@@ -1,11 +1,29 @@
-.search__subtitle {
+@media all and (min-width: 0px) {
+  .search__subtitle {
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    max-width: 545px;
-    font-size: 18px;
-    line-height: 24px;
+    font-weight: 400;
+    max-width: 288px;
+    font-size: 20px;
+    line-height: 26px;
     color: #ffffff;
     margin: 0px;
+    padding-bottom: 60px;
+  }
+}
+
+@media all and (min-width: 480px) {
+  .search__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 24px;
+    max-width: 450px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .search__subtitle {
+    max-width: 545px;
     padding-bottom: 64px;
   }
+}

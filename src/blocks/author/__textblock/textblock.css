@@ -1,5 +1,22 @@
-.author__textblock {
-  max-width: 600px;
-  display: block;
-  padding: 51px 0px 0px 56px;
+@media all and (min-width: 0px) {
+  .author__textblock {
+    max-width: 100%;
+    display: block;
+    padding: 24px 16px 0px 0px;
+    margin: 0px;
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .author__textblock {
+    padding: 0px;
+    max-width: 424px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .author__textblock {
+    max-width: 600px;
+  }
 }

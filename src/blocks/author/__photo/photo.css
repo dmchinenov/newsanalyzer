@@ -1,16 +1,31 @@
-.author__photo {
-    max-width: 464px;
-    max-height: 464px;
-    margin: 0px;
+@media all and (min-width: 0px) {
+  .author__photo {
+    width: 272px;
+    height: 272px;
     border-radius: 50%;
-    display: block;
-
+    margin: 0px auto;
   }
+}
 
-  @media screen and (max-width: 1200px) {
-    .author__photo {
-      max-width: 300px;
-      max-height: 300px;
-      align-self: center;
-    }
+@media all and (min-width: 768px) {
+  .author__photo {
+    width: 232px;
+    height: 232px;
+    margin: 20px 32px 0px 0px;
   }
+}
+
+@media all and (min-width: 1024px) {
+  .author__photo {
+    width: 350px;
+    height: 350px;
+    margin: 0px 56px 0px 0px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .author__photo {
+    width: 464px;
+    height: 464px;
+  }
+}

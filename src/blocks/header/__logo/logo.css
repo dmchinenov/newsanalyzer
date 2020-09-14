@@ -1,12 +1,18 @@
+@media all and (min-width: 0px) {
+  .header__logo {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    margin: 0px;
+    text-decoration: none;
+  }
+}
 
-
-.header__logo {
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 24px;
-  color: #ffffff;
-  margin: 0px;
-  text-decoration: none;
+@media all and (min-width: 768px) {
+  .header__logo {
+    font-size: 20px;
+  }
 }
