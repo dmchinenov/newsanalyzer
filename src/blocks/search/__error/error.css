@@ -1,0 +1,11 @@
+.search__error {
+  position: absolute;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: white;
+  left: 30px;
+  bottom: 65px;
+}

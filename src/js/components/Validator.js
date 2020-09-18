@@ -1,19 +1,19 @@
-export const errorMessages = {
-  emptyinput: "Это обязательное поле",
-  errorlength: "Должно быть от 2 до 30 символов",
-};
+import { errorMessages } from "../constans/constans.js";
 
-console.log("sdafdsfds");
+// что можно добавить :
+// Сейчас валидация работает на один инпут, а их возможно несколько. Валидация не должна искать элементы, их нужно передавать в валидацию
 
 export class FormValidator {
   constructor(form) {
     this.form = form;
   }
-  // слушатель формы
+
+  // Слушатель инпута
   setEventListener() {
-    this.form.addEventListener("input", this.handlerInputForm.bind(this));
+    this.form.addEventListener("input", this.isFieldValid.bind(this));
   }
-  // проверяем инпуты на наличие ошибок. Получаем имя ошибки
+
+  // Присваиваем тексты ошибок к инпутам
   isValidate(input) {
     input.setCustomValidity("");
     if (input.validity.valueMissing) {
@@ -24,63 +24,31 @@ export class FormValidator {
       input.setCustomValidity(errorMessages.errorlength);
       return false;
     }
-    if (input.validity.typeMismatch && input.type === "url") {
-      input.setCustomValidity(errorMessages.errorurl);
-      return false;
-    }
     return input.checkValidity();
   }
 
-  // проверяем инпут и присваиваем ошибку для span.
-  isFieldValid(input) {
-    const errorElement = input.parentNode.querySelector(`#${input.id}error`);
+  // Проверяем инпут и присваиваем ошибку для span.
+  isFieldValid() {
+    const input = this.form.querySelector(".search__input");
+    const errorElement = document.querySelector(".search__error");
     const valid = this.isValidate(input);
     errorElement.textContent = input.validationMessage;
     return valid;
   }
 
-  // проверяем валидна ли форма
-  isFormValid(form) {
-    const inputs = Array.from(form.elements);
-    let res = true;
-    const valid = [];
-    inputs.forEach((item) => {
-      if (item.type !== "submit" && item.type !== "button") {
-        valid.push(this.isFieldValid(item));
-      }
-    });
-    if (valid.join(",").includes("false")) {
-      res = false;
+  // Проверяем валидна ли форма
+  isFormValid() {
+    if (this.isFieldValid(this.form)) {
+      return true;
+    } else {
+      return false;
     }
-    return res;
   }
 
-  // задаем свойства кнопке
-  setSubmitButtonState(button, valid) {
-    if (valid) {
-      button.classList.add(`popup__button_valid`);
-    } else {
-      button.classList.remove(`popup__button_valid`);
-    }
-  }
-  // проверяем инпуты на валидность
-  handlerInputForm(event) {
-    const submit = this.form.querySelector(".button");
-    const inputs = Array.from(this.form.elements);
-    this.isFieldValid(event.target);
-    if (inputs.every(this.isValidate)) {
-      this.setSubmitButtonState(submit, true);
-    } else {
-      this.setSubmitButtonState(submit, false);
-    }
-  }
-  // сбрасываем ошибки с формы
+  // Сбрасываем ошибки с формы
   clearError() {
-    const inputs = this.form.querySelectorAll(".popup__errorspan");
-    inputs.forEach(function (item) {
-      if (item.type !== "submit" && item.type !== "button") {
-        item.textContent = " ";
-      }
-    });
+    const error = this.form.querySelector(".search__error");
+    error.textContent = " ";
+    console.log("sadas");
   }
 }
