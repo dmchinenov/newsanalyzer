@@ -1,54 +1,41 @@
-import { errorMessages } from "../constans/constans.js";
-
-// что можно добавить :
-// Сейчас валидация работает на один инпут, а их возможно несколько. Валидация не должна искать элементы, их нужно передавать в валидацию
+// Сейчас мы ищем инпут внутри переданной формы по классу, лучше переделать на поиск всех инпутов в переданной форме без указания класса
 
 export class FormValidator {
-  constructor(form) {
-    this.form = form;
+  constructor(SEARCH_FORM, ERROR_MESSAGES, SEARCH_ERROR) {
+    this.form = SEARCH_FORM;
+    this.errorMessages = ERROR_MESSAGES;
+    this.errorElem = SEARCH_ERROR;
   }
 
   // Слушатель инпута
   setEventListener() {
-    this.form.addEventListener("input", this.isFieldValid.bind(this));
+    this.form.addEventListener("input", this.isFormValid.bind(this));
   }
 
   // Присваиваем тексты ошибок к инпутам
   isValidate(input) {
     input.setCustomValidity("");
     if (input.validity.valueMissing) {
-      input.setCustomValidity(errorMessages.emptyinput);
+      input.setCustomValidity(this.errorMessages.emptyinput);
       return false;
     }
     if (input.validity.tooShort || input.validity.tooLong) {
-      input.setCustomValidity(errorMessages.errorlength);
+      input.setCustomValidity(this.errorMessages.errorlength);
       return false;
     }
     return input.checkValidity();
   }
 
-  // Проверяем инпут и присваиваем ошибку для span.
-  isFieldValid() {
-    const input = this.form.querySelector(".search__input");
-    const errorElement = document.querySelector(".search__error");
-    const valid = this.isValidate(input);
-    errorElement.textContent = input.validationMessage;
-    return valid;
-  }
-
-  // Проверяем валидна ли форма
+  // Проверяем форму и присваиваем ошибку для spanError.
   isFormValid() {
-    if (this.isFieldValid(this.form)) {
-      return true;
-    } else {
-      return false;
-    }
+    const input = this.form.querySelector(".search__input");
+    const valid = this.isValidate(input);
+    this.errorElem.textContent = input.validationMessage;
+    return valid;
   }
 
   // Сбрасываем ошибки с формы
   clearError() {
-    const error = this.form.querySelector(".search__error");
-    error.textContent = " ";
-    console.log("sadas");
+    this.errorElem.textContent = " ";
   }
 }

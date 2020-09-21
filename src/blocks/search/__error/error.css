@@ -1,11 +1,48 @@
-.search__error {
-  position: absolute;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  color: white;
-  left: 30px;
-  bottom: 65px;
+@media all and (min-width: 0px) {
+  .search__error {
+    position: absolute;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    left: 18px;
+    bottom: 128px;
+  }
+}
+.search__error_anim {
+  animation: vibro 0.5s linear;
+}
+
+@media all and (min-width: 480px) {
+  .search__error {
+    left: 21px;
+    bottom: 55px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .search__error {
+    left: 26px;
+    bottom: 64px;
+  }
+}
+
+@keyframes vibro {
+  0% {
+    left: 26px;
+  }
+  25% {
+    left: 20px;
+  }
+  50% {
+    left: 26px;
+  }
+  75% {
+    left: 20px;
+  }
+  100% {
+    left: 26px;
+  }
 }

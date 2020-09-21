@@ -34,18 +34,18 @@
             <p class="search__subtitle">Введите в&nbsp;поиске любую тему и&nbsp;узнайте, насколько популярной она
                 была в&nbsp;новостях за&nbsp;прошедшую неделю.</p>
             <form class="search__form" novalidate>
-                <input type="text" class="search__input" required minlength="2" maxlength="30"
+                <input type="text" class="search__input" required minlength="3" maxlength="30"
                     placeholder="Введите тему новости">
                 <span class="search__error"></span>
                 <button type="submit" class="search__button">Искать</button>
             </form>
         </div>
     </section>
-    <section class="preloader">
+    <section class="preloader" hidden>
         <div class="preloader__search"></div>
         <p class="preloader__searchtext">Идет поиск новостей...</p>
     </section>
-    <section class="infonotfound">
+    <section class="infonotfound" hidden>
         <div class="infonotfound__icon"></div>
         <p class="infonotfound__title">Ничего не найдено</p>
         <p class="infonotfound__subtitle">К&nbsp;сожалению по&nbsp;вашему запросу ничего не&nbsp;найдено.</p>
@@ -56,39 +56,19 @@
             <a href="./analytics.html" class="main__checkanalytics">Посмотреть аналитику</a>
         </div>
         <div class="main__cardcontainer">
-            <div class="card">
-                <a href="" class="card__content">
-                    <div class="card__image"></div>
-                    <p class="card__date">2 августа, 2019</p>
-                    <h3 class="card__title">Национальное достояние – парки</h3>
-                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                        складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
-                        приобщиться к природе.</p>
-                </a>
-                <a href="" class="card__author">Лента.ру</a>
-            </div>
-            <div class="card">
-                <a href="" class="card__content">
-                    <div class="card__image"></div>
-                    <p class="card__date">2 августа, 2019</p>
-                    <h3 class="card__title">Национальное достояние – парки</h3>
-                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                        складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
-                        приобщиться к природе.</p>
-                </a>
-                <a href="" class="card__author">Лента.ру</a>
-            </div>
-            <div class="card">
-                <a href="" class="card__content">
-                    <div class="card__image"></div>
-                    <p class="card__date">2 августа, 2019</p>
-                    <h3 class="card__title">Национальное достояние – парки</h3>
-                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                        складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
-                        приобщиться к природе.</p>
-                </a>
-                <a href="" class="card__author">Лента.ру</a>
-            </div>
+            <template class="cardtemplate">
+                <div class="card">
+                    <a href="" class="card__content">
+                        <div class="card__image"></div>
+                        <p class="card__date">2 августа, 2019</p>
+                        <h3 class="card__title">Национальное достояние – парки</h3>
+                        <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                            складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
+                            приобщиться к природе.</p>
+                    </a>
+                    <a href="" class="card__author">Лента.ру</a>
+                </div>
+            </template>
         </div>
         <button class="main__button" type="submit">Показать ещё</button>
     </section>
