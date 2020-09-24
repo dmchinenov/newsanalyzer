@@ -1,17 +1,18 @@
 export class CreateDate {
-  constructor(date) {
-    this.date = date;
-  }
+	constructor(dateFromWeek, dateToday) {
+		this.dateFromWeek = dateFromWeek;
+		this.dateToday = dateToday;
+	}
 
-  dayTo() {
-    this.date.setDate(this.date.getDate() + 1);
-    const today = this.date.toISOString().split("T")[0];
-    return today;
-  }
+	dayTo() {
+		this.dateFromWeek.setDate(this.dateFromWeek.getDate() - 1);
+		const dayFromWeek = this.dateFromWeek.toISOString().split('T')[0];
+		return dayFromWeek;
+	}
 
-  dayFrom() {
-    this.date.setDate(this.date.getDate() - 7);
-    const dayfrom = this.date.toISOString().split("T")[0];
-    return dayfrom;
-  }
+	dayFrom() {
+		this.dateToday.setDate(this.dateToday.getDate() - 7);
+		const dayToday = this.dateToday.toISOString().split('T')[0];
+		return dayToday;
+	}
 }

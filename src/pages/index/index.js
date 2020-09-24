@@ -2,57 +2,61 @@
 import '../index.css';
 
 // classes
-import { FormValidator } from '../../js/components/Validator.js';
+
+import { Validation } from '../../js/components/Validation.js';
 import { NewsApi } from '../../js/modules/NewsApi.js';
 import { CreateDate } from '../../js/components/CreateDate.js';
 import { ShowHide } from '../../js/components/ShowHide.js';
 import { NewsCard } from '../../js/components/NewsCard';
-
-// constants
-import {
-	ERROR_MESSAGES,
-	SEARCH_FORM,
-	SEARCH_ERROR,
-	SEARCH_INPUT,
-	NEWS_API_URL,
-	NEWS_API_DATA,
-	PRELOADER,
-  NOT_FOUND,
-  TEMPLATE
-} from '../../js/constans/constants.js';
 import { NewsCardList } from '../../js/components/NewsCardList';
 
-const CARD_CONTAINER = document.querySelector('.main__cardcontainer');
+// constants
+import { SELECTORS, ERROR_MESSAGES, NEWS_API_URL, NEWS_API_DATA, SUMM_CARDS_RENDER } from '../../js/constans/constants.js';
 
-// new classes
-const date = new Date();
-const showHide = new ShowHide();
-const newsCard = new NewsCard(TEMPLATE);
-const createDate = new CreateDate(date);
-const dayTo = createDate.dayTo();
-const dayFrom = createDate.dayFrom();
-const newsApi = new NewsApi(NEWS_API_DATA, NEWS_API_URL, SEARCH_INPUT, dayTo, dayFrom);
-const newsCardList = new NewsCardList(newsCard, CARD_CONTAINER, newsApi); 
-const validateForm = new FormValidator(SEARCH_FORM, ERROR_MESSAGES, SEARCH_ERROR);
+(function () {
 
+	const dateFromWeek = new Date();
+	const dateToday = new Date();
+	const createDate = new CreateDate(dateFromWeek, dateToday);
+	const showHide = new ShowHide();
+	const newsCard = new NewsCard(SELECTORS.newCardTemplate);
+	const dayTo = createDate.dayTo();
+	const dayFrom = createDate.dayFrom();
+	const newsApi = new NewsApi(NEWS_API_DATA, NEWS_API_URL, SELECTORS.searchInput, dayTo, dayFrom);
+	const newsCardList = new NewsCardList(newsCard, SELECTORS.cardContainer, SUMM_CARDS_RENDER, showHide, SELECTORS.mainButton);
+	const validation = new Validation(SELECTORS.searchForm, ERROR_MESSAGES, SELECTORS.searchError);
 
+	//  отслеживаем содержание инпутов
+	validation.setEventListener();
 
-//  отслеживаем содержание инпутов
-validateForm.setEventListener();
-
-// ставим слушатель на кнопку, валидируем форму, обрабатываем запрос
-SEARCH_FORM.addEventListener('submit', function(event) {
-	event.preventDefault();
-	if (validateForm.isFormValid(SEARCH_FORM)) {
-		showHide.hide(NOT_FOUND);
-		showHide.show(PRELOADER);
-		newsApi.loadCard().then((res) => {
-			if (res.articles == 0) {
-				showHide.show(NOT_FOUND);
-			}
-      showHide.hide(PRELOADER);
-      newsCardList.renderCard(res.articles);
-      
-		});
+	function submitSearchButton() {
+		if (validation.isFormValid(SELECTORS.searchForm)) {
+			newsCardList.clearCardContainer();
+			showHide.hide(SELECTORS.notFound);
+			showHide.show(SELECTORS.preloader);
+			newsApi.loadCard().then((res) => {
+				if (res.articles == 0) {
+					showHide.show(SELECTORS.notFound);
+				}
+				showHide.hide(SELECTORS.preloader);
+				showHide.show(SELECTORS.main);
+				newsCardList.renderCard(res);
+			});
+		}
 	}
-});
+
+	// ставим слушатель на кнопку, валидируем форму, обрабатываем запрос
+	SELECTORS.searchForm.addEventListener('submit', function (event) {
+		event.preventDefault();
+		submitSearchButton(event);
+	});
+
+	SELECTORS.mainButton.addEventListener('click', function () {
+		newsApi.loadCard().then((res) => {
+			newsCardList.renderCard(res);
+		});
+	});
+
+
+
+})();
