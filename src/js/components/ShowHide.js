@@ -1,6 +1,6 @@
 // класс скрывает/отображает переданные элементы или блоки
 
-export class ShowHide {
+export class ShowHideDisabled {
 	constructor() {}
 
 	show(element) {
@@ -8,5 +8,8 @@ export class ShowHide {
 	}
 	hide(element) {
 		element.classList.add('visually-hidden');
+	}
+	disabled(element, boolean) {
+		element.disabled = boolean;
 	}
 }

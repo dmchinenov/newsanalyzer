@@ -9,7 +9,7 @@ export class NewsApi {
 		this.key = NEWS_API_DATA.apiKey;
 		this.lang = NEWS_API_DATA.apiLang;
 		this.sortby = NEWS_API_DATA.apiSortby;
-		this.pageSize = NEWS_API_DATA.apiPagesize;
+		this.pageSize = NEWS_API_DATA.apiPageSize;
 		this.searchInput = searchInput;
 		this.dayTo = dayTo;
 		this.dayFrom = dayFrom;
@@ -29,8 +29,7 @@ export class NewsApi {
 		)
 			.then((res) => {
 				if (res.ok) {
-					console.log(this.dayTo)
-					console.log(this.dayFrom)
+					console.log(this.dayTo, this.dayFrom)
 					return res.json();
 				}
 			})
