@@ -1,0 +1,15 @@
+@import url("./__button/button.css");
+@import url("./__container/container.css");
+@import url("./__form/form.css");
+@import url("./__input/input.css");
+@import url("./__subtitle/subtitle.css");
+@import url("./__title/title.css");
+
+@media all and (min-width: 0px) {
+  .search {
+    background-image: url(../../images/mainbackground.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}

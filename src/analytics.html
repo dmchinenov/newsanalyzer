@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Аналитика новостей">
+    <meta name="author" content="Dmitry Chinenov">
+    <title>News Analyzer</title>
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+
+<body class="body">
+    <!-- header -->
+    <header class="header header_white">
+        <div class="header__container">
+            <a href="./index.html" class="header__logo header__logo_black">NewsAnalyzer</a>
+            <nav class="header__menu">
+                <ul class="header__menu-links">
+                    <li class="header__menu-elem">
+                        <a href="./index.html" class="header__menu-link header__menu-link_simple">Главная</a>
+                    </li>
+                    <li class="header__menu-elem">
+                        <a href="./about.html" class="header__menu-link header__menu-link_simple">О проекте</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="site-navigator">
+        <ul class="site-navigator__linkbox">
+            <li class="site-navigator__item">
+                <a href="./index.html" class="site-navigator__link site-navigator__link_main">Главная</a>
+            </li>
+            <li class="site-navigator__item">
+                <a href="./analytics.html" class="site-navigator__link">Аналитика</a>
+            </li>
+            </div>
+    </section>
+    <section class="request">
+        <h1 class="request__title">Вы спросили: «Путешествия»</h1>
+        <p class="request__data">Новостей за неделю: <span class="request__data request__data_number">34 324</span></p>
+        <p class="request__data">Упоминаний в загаловках: <span class="request__data request__data_number">235</span>
+        </p>
+    </section>
+    <section class="stats">
+        <div class="stats__container">
+            <h2 class="stats__title">Аналитика по дням</h2>
+            <div class="stats__header">
+                <p class="stats__header-date">Дата (август)</p>
+                <p class="stats__header-summ">Кол-во упоминаний</p>
+            </div>
+            <ul class="stats__numbers">
+                <li class="stats__number">0</li>
+                <li class="stats__number">25</li>
+                <li class="stats__number">50</li>
+                <li class="stats__number">75</li>
+                <li class="stats__number">100</li>
+            </ul>
+            <div class="stats__hystogram">
+                <div class="stats__item">
+                    <p class="stats__item-date">19, пн</p>
+                    <div class="stats__item-graph" style="width: 15%;">15</div>
+                </div>
+                <div class="stats__item">
+                    <p class="stats__item-date">20, вт</p>
+                    <div class="stats__item-graph" style="width: 18%;">18</div>
+                </div>
+                <div class="stats__item">
+                    <p class="stats__item-date">21, ср</p>
+                    <div class="stats__item-graph" style="width: 11%;">11</div>
+                </div>
+                <div class="stats__item">
+                    <p class="stats__item-date">22, чт</p>
+                    <div class="stats__item-graph" style="width: 39%;">39</div>
+                </div>
+                <div class="stats__item">
+                    <p class="stats__item-date">23, пт</p>
+                    <div class="stats__item-graph" style="width: 45%;">45</div>
+                </div>
+                <div class="stats__item">
+                    <p class="stats__item-date">24, сб</p>
+                    <div class="stats__item-graph" style="width: 73%;">73</div>
+                </div>
+                <div class="stats__item">
+                    <p class="stats__item-date">25, вс</p>
+                    <div class="stats__item-graph" style="width: 34%;">34</div>
+                </div>
+            </div>
+            <ul class="stats__numbers">
+                <li class="stats__number">0</li>
+                <li class="stats__number">25</li>
+                <li class="stats__number">50</li>
+                <li class="stats__number">75</li>
+                <li class="stats__number">100</li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__authorblock">&#169; 2020 Дмитрий Чиненов</p>
+            <nav class="footer__menublock">
+                <ul class="footer__menublock-links">
+                    <li class="footer__menu-elem">
+                        <a href="./index.html" class="footer__menu-link">Главная</a>
+                    </li>
+                    <li class="footer__menu-elem">
+                        <a href="./about.html" class="footer__menu-link">О проекте</a>
+                    </li>
+                    <li class="footer__menu-elem">
+                        <a target="_blank" href="https://praktikum.yandex.ru"
+                            class="footer__menu-link">Яндекс.Практикум</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="footer__socialblock">
+                <li class="footer__socialblock-link">
+                    <a target="_blank" href="https://github.com"
+                        class="footer__socialblock-elem footer__socialblock-elem_github"></a>
+                </li>
+                <li class="footer__socialblock-link">
+                    <a target="_blank" href="http://facebook.com"
+                        class="footer__socialblock-elem footer__socialblock-elem_fb"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.js %>">
+</body>
+
+</html>

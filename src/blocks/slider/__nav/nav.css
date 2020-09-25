@@ -1,0 +1,10 @@
+@media all and (min-width: 0px) {
+  .slider__nav {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #d1d2d6;
+    margin: 0px 8px 0px 0px;
+    cursor: pointer;
+  }
+}

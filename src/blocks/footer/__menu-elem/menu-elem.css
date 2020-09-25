@@ -1,0 +1,17 @@
+@media all and (min-width: 0px) {
+  .footer__menu-elem {
+    margin: 0px 0px 20px 0px;
+    padding: 0px;
+  }
+}
+
+@media all and (min-width: 500px) {
+  .footer__menu-elem {
+    margin: 0px 20px 20px 0px;
+    padding: 0px;
+  }
+}
+
+.footer__menu-elem:last-child {
+  margin: 0px;
+}

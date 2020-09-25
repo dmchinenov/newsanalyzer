@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Сервис поиска и анализа новостей">
+    <meta name="author" content="Dmitry Chinenov">
+    <title>News Analyzer</title>
+    <link rel="shortcut icon" href="<%=require('./images/favicon.svg').default%>" type="image/x-icon">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header__container">
+            <a href="./index.html" class="header__logo">NewsAnalyzer</a>
+            <nav class="header__menu">
+                <ul class="header__menu-links">
+                    <li class="header__menu-elem">
+                        <a href="./index.html" class="header__menu-link header__menu-link_active">Главная</a>
+                    </li>
+                    <li class="header__menu-elem">
+                        <a href="./about.html" class="header__menu-link">О проекте</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="search">
+        <div class="search__container">
+            <h1 class="search__title">Что в мире творится?</h1>
+            <p class="search__subtitle">Введите в&nbsp;поиске любую тему и&nbsp;узнайте, насколько популярной она
+                была в&nbsp;новостях за&nbsp;прошедшую неделю.</p>
+            <form class="search__form" novalidate>
+                <input type="text" class="search__input" required minlength="2" maxlength="30"
+                    placeholder="Введите тему новости">
+                <button type="submit" class="search__button">Искать</button>
+            </form>
+        </div>
+    </section>
+    <section class="preloader">
+        <div class="preloader__search"></div>
+        <p class="preloader__searchtext">Идет поиск новостей...</p>
+    </section>
+    <section class="infonotfound">
+        <div class="infonotfound__icon"></div>
+        <p class="infonotfound__title">Ничего не найдено</p>
+        <p class="infonotfound__subtitle">К&nbsp;сожалению по&nbsp;вашему запросу ничего не&nbsp;найдено.</p>
+    </section>
+    <section class="main">
+        <div class="main__header">
+            <h2 class="main__resultsearch">Результаты поиска</h2>
+            <a href="./analytics.html" class="main__checkanalytics">Посмотреть аналитику</a>
+        </div>
+        <div class="main__cardcontainer">
+            <div class="card">
+                <a href="" class="card__content">
+                    <div class="card__image"></div>
+                    <p class="card__date">2 августа, 2019</p>
+                    <h3 class="card__title">Национальное достояние – парки</h3>
+                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                        складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
+                        приобщиться к природе.</p>
+                </a>
+                <a href="" class="card__author">Лента.ру</a>
+            </div>
+            <div class="card">
+                <a href="" class="card__content">
+                    <div class="card__image"></div>
+                    <p class="card__date">2 августа, 2019</p>
+                    <h3 class="card__title">Национальное достояние – парки</h3>
+                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                        складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
+                        приобщиться к природе.</p>
+                </a>
+                <a href="" class="card__author">Лента.ру</a>
+            </div>
+            <div class="card">
+                <a href="" class="card__content">
+                    <div class="card__image"></div>
+                    <p class="card__date">2 августа, 2019</p>
+                    <h3 class="card__title">Национальное достояние – парки</h3>
+                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                        складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
+                        приобщиться к природе.</p>
+                </a>
+                <a href="" class="card__author">Лента.ру</a>
+            </div>
+        </div>
+        <button class="main__button" type="submit">Показать ещё</button>
+    </section>
+    <section class="author">
+        <div class="author__container">
+            <img class="author__photo" src="<%=require('./images/avatar.webp').default%>" alt="Author photo">
+            <div class="author__textblock">
+                <h2 class="author__title">Об авторе</h2>
+                <p class="author__text">Привет!<br>
+                    Меня зовут Дмитрий, и&nbsp;этим проектом я&nbsp;завершаю своё обучение
+                    в&nbsp;школе Яндекс.Практикум.<br>
+                    Данный сайт умеет искать и&nbsp;анализировать новости,
+                    он&nbsp;адаптирован
+                    под различные браузеры и разрешения. Надеюсь, вам понравится его функционал.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__authorblock">&#169; 2020 Dmitry Chinenov</p>
+            <nav class="footer__menublock">
+                <ul class="footer__menublock-links">
+                    <li class="footer__menu-elem">
+                        <a href="./index.html" class="footer__menu-link">Главная</a>
+                    </li>
+                    <li class="footer__menu-elem">
+                        <a href="./about.html" class="footer__menu-link">О проекте</a>
+                    </li>
+                    <li class="footer__menu-elem">
+                        <a target="_blank" href="https://praktikum.yandex.ru"
+                            class="footer__menu-link">Яндекс.Практикум</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="footer__socialblock">
+                <li class="footer__socialblock-link">
+                    <a target="_blank" href="https://github.com"
+                        class="footer__socialblock-elem footer__socialblock-elem_github"></a>
+                </li>
+                <li class="footer__socialblock-link">
+                    <a target="_blank" href="http://facebook.com"
+                        class="footer__socialblock-elem footer__socialblock-elem_fb"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.js %>">
+</body>
+
+</html>

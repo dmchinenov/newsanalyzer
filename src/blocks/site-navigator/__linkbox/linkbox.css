@@ -1,0 +1,21 @@
+@media all and (min-width: 768px) {
+  .site-navigator__linkbox {
+    display: flex;
+    max-width: 1235px;
+    list-style-type: none;
+    margin: 0px auto;
+    padding: 0px 0px 0px 0px;
+    max-width: 90%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .site-navigator__linkbox {
+    display: flex;
+    max-width: 1235px;
+    list-style-type: none;
+    margin: 0px auto;
+    padding: 0px 104px 0px 104px;
+    max-width: 1235px;
+  }
+}

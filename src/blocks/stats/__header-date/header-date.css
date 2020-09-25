@@ -1,0 +1,22 @@
+@media all and (min-width: 0px) {
+  .stats__header-date {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #b6bcbf;
+    margin: 0px;
+    max-width: 60px;
+    padding-right: 16px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .stats__header-date {
+    max-width: 80px;
+    padding-right: 24px;
+  }
+}

@@ -1,0 +1,26 @@
+@media all and (min-width: 0px) {
+  .stats__container {
+    display: block;
+    padding: 24px 0px 48px 0px;
+    max-width: 1235px;
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .stats__container {
+    display: block;
+    padding: 40px 0px 45px 0px;
+    max-width: 1235px;
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .stats__container {
+    padding: 80px 104px 80px 104px;
+    max-width: 1235px;
+  }
+}

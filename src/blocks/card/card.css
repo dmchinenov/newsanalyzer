@@ -1,0 +1,37 @@
+@import url("./__author/author.css");
+@import url("./__content/content.css");
+@import url("./__date/date.css");
+@import url("./__image/image.css");
+@import url("./__text/text.css");
+@import url("./__title/title.css");
+
+@media all and (min-width: 0px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+    min-height: 446px;
+    background: #ffffff;
+    border-radius: 15px;
+    margin: 0px auto 8px auto;
+  }
+}
+
+@media all and (min-width: 480px) {
+  .card {
+    min-height: 420px;
+    margin: 0px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .card {
+    min-height: 576px;
+  }
+}
+
+.card:hover {
+  box-shadow: 0px 9px 26px -12px rgba(0, 0, 0, 0.74);
+  transition: 0.3s ease;
+}

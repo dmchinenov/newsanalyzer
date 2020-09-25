@@ -1,0 +1,15 @@
+@media all and (min-width: 0px) {
+  .search__form {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 480px) {
+  .search__form {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+}

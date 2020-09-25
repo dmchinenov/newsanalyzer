@@ -1,0 +1,26 @@
+@media all and (min-width: 0px) {
+  .header__menu-link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #b6bcbf;
+    margin: 0px;
+    margin-left: 11px;
+    transition: 0.2s ease;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .header__menu-link {
+    font-size: 18px;
+    margin-left: 34px;
+  }
+}
+.header__menu-link:hover {
+  color: #ffffff;
+  transition: 0.2s ease;
+}

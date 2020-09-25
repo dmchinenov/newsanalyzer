@@ -1,0 +1,22 @@
+@media all and (min-width: 0px) {
+  .header__container {
+    margin: 0px auto;
+    padding: 16px 16px 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .header__container {
+    padding: 22px 42px 0px 42px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .header__container {
+    padding: 30px 104px 0px 104px;
+    max-width: 1235px;
+  }
+}

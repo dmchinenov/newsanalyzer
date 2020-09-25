@@ -1,0 +1,41 @@
+@media all and (min-width: 0px) {
+  .search__button {
+    background: #2f71e5;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+    border-radius: 100px;
+    padding: 15px 114px 15px 114px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    outline: none;
+    border-width: 0px;
+    margin: 16px auto 0px;
+    cursor: pointer;
+  }
+}
+
+@media all and (min-width: 480px) {
+  .search__button {
+    padding: 15px 50px 17px 50px;
+    margin: 0px auto 0px;
+    position: absolute;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .search__button {
+    padding: 20px 53.5px 20px 53.5px;
+  }
+}
+
+.search__button:focus {
+  background: #2a65cc;
+}
+
+.search__button:hover {
+  background: #347eff;
+  transition: 0.3s;
+}

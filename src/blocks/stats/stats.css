@@ -1,0 +1,20 @@
+@import url("./__container/container.css");
+@import url("./__header-date/header-date.css");
+@import url("./__header-summ/header-summ.css");
+@import url("./__header/header.css");
+@import url("./__hystogram/hystogram.css");
+@import url("./__item-date/item-date.css");
+@import url("./__item-graph/item-graph.css");
+@import url("./__item/item.css");
+@import url("./__numbers/numbers.css");
+@import url("./__numbers/numbers.css");
+@import url("./__title/title.css");
+
+@media all and (min-width: 0px) {
+  .stats {
+    margin: auto;
+    max-width: 100%;
+    padding: 0px;
+    background: #f5f6f7;
+  }
+}

@@ -1,0 +1,20 @@
+@media all and (min-width: 0px) {
+  .author__title {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    color: #1a1b22;
+    margin: 0px;
+    padding-bottom: 16px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .author__title {
+    font-size: 40px;
+    line-height: 46px;
+    padding-bottom: 24px;
+  }
+}

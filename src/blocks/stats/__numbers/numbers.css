@@ -1,0 +1,18 @@
+@media all and (min-width: 0px) {
+  .stats__numbers {
+    max-width: 100%;
+    padding: 16px 0px 0px 104px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0px;
+    display: none;
+    color: #b6bcbf;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .stats__numbers {
+    display: flex;
+  }
+}

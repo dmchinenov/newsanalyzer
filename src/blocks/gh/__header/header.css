@@ -1,0 +1,23 @@
+@media all and (min-width: 0px) {
+  .gh__header {
+    display: block;
+    padding: 0px 0px 16px 0px;
+    margin: auto;
+    max-width: 90%;
+  }
+}
+
+@media all and (min-width: 500px) {
+  .gh__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 32px 0px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .gh__header {
+    max-width: 1235px;
+    padding: 0px 104px 64px 104px;
+  }
+}

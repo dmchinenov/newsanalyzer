@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Информация о сервисе NewsAnalyzer">
+    <meta name="author" content="Dmitry Chinenov">
+    <title>News Analyzer</title>
+    <link rel="shortcut icon" href="<%=require('./images/favicon.svg').default%>" type="image/x-icon">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+
+<body class="body">
+    <header class="header header_white">
+        <div class="header__container">
+            <a href="./index.html" class="header__logo header__logo_black">NewsAnalyzer</a>
+            <nav class="header__menu">
+                <ul class="header__menu-links">
+                    <li class="header__menu-elem">
+                        <a href="./index.html" class="header__menu-link">Главная</a>
+                    </li>
+                    <li class="header__menu-elem">
+                        <a href="./about.html" class="header__menu-link header__menu-link_black-active">О проекте</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="client">
+        <div class="client__content">
+            <h1 class="client__title">Клиентам</h1>
+            <p class="client__text">Этот сайт&nbsp;&mdash; дипломный проект студента Яндекс.Практикума. Его
+                цель&nbsp;&mdash; показать, чему научился студент, какими технологиями владеет.</p>
+            <p class="client__text">Вёрстка сайта выполнена по&nbsp;методологии БЭМ. Это делает сайт гибким
+                и&nbsp;масштабируемым. Кроме того, добавлять новые страницы и&nbsp;функциональность проще
+                и&nbsp;быстрее, чем в&nbsp;проектах, выполненных по&nbsp;другим методологиям. Также сайт проще
+                и&nbsp;дешевле поддерживать.</p>
+            <p class="client__text">Карточки с&nbsp;новостями приходят с&nbsp;сервера и&nbsp;обрабатываются асинхронно.
+                То&nbsp;есть сайт продолжает работать, пока от&nbsp;сервера приходит ответ. Это повышает удобство
+                использования сервиса.</p>
+            <p class="client__text">При создании проекта была использована сборка технологией Webpack. Это современный
+                подход к&nbsp;разработке сайтов. Код оптимизируется, а&nbsp;значит, сайт работает быстрее. Также сайт
+                работает в&nbsp;старых браузерах. Даже если посетители&nbsp;&mdash; пользователи старых операционных
+                систем, у&nbsp;них не&nbsp;будет проблем с&nbsp;отображением. А&nbsp;значит, потенциальная аудитория
+                возрастает.
+            </p>
+            <p class="client__text">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт,
+                мы&nbsp;рекомендуем обратиться к&nbsp;этому студенту.</p>
+        </div>
+    </section>
+    <section class="tech">
+        <div class="tech__content">
+            <h2 class="tech__title">Используемые
+                технологии</h2>
+            <div class="tech__logocontainer">
+                <div class="tech__logobox">
+                    <p class="tech__logoname">HTML</p>
+                    <img src="<%=require('./images/htmllogo.svg').default%>" class="tech__logo" alt="HTML logo">
+                </div>
+                <div class="tech__logobox">
+                    <p class="tech__logoname">CSS</p>
+                    <img src="<%=require('./images/csslogo.svg').default%>" class="tech__logo" alt="CSS logo">
+                </div>
+                <div class="tech__logobox">
+                    <p class="tech__logoname">Java Script</p>
+                    <img src="<%=require('./images/jslogo.svg').default%>" class="tech__logo" alt="JavaScript logo">
+                </div>
+                <div class="tech__logobox">
+                    <p class="tech__logoname">Webpack</p>
+                    <img src="<%=require('./images/webpacklogo.svg').default%>" class="tech__logo" alt="Webpack logo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="author">
+        <div class="author__container">
+            <img class="author__photo" src="<%=require('./images/avatar.webp').default%>" alt="Author photo">
+            <div class="author__textblock">
+                <h2 class="author__title">Об авторе</h2>
+                <p class="author__text">Привет!<br>
+                    Меня зовут Дмитрий, и&nbsp;этим проектом я&nbsp;завершаю своё обучение
+                    в&nbsp;школе Яндекс.Практикум.<br>
+                    Данный сайт умеет искать и&nbsp;анализировать новости,
+                    он&nbsp;адаптирован
+                    под различные браузеры и разрешения. Надеюсь, вам понравится его функционал.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="gh">
+        <div class="gh__header">
+            <h2 class="gh__title">История коммитов из GitHub</h2>
+            <a target="_blank" href="https://github.com" class="gh__ghlink">Открыть в Github</a>
+        </div>
+        <div class="slider">
+            <div class="slider__button"></div>
+            <div class="slider__button slider__button_left"></div>
+            <ul class="slider__container">
+                <li class="ghcard">
+                    <p class="ghcard_carddate">14 августа, 2019</p>
+                    <div class="ghcard__authorbox">
+                        <img src="<%=require('./images/gitava.jpg').default%>" class="ghcard__avatar" alt="Author foto">
+                        <div class="ghcard__textbox">
+                            <p class="ghcard__authorname">Антон Долинин</p>
+                            <p class="ghcard__email">anton@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="ghcard__commit">Emmet (formerly Zen Coding) is&nbsp;a&nbsp;web-
+                        developer&rsquo;s toolkit that can greatly improve your HTML&nbsp;&amp; CSS workflow.
+                    </p>
+                </li>
+                <li class="ghcard">
+                    <p class="ghcard_carddate">14 августа, 2019</p>
+                    <div class="ghcard__authorbox">
+                        <img src="<%=require('./images/gitava.jpg').default%>" class="ghcard__avatar" alt="Author foto">
+                        <div class="ghcard__textbox">
+                            <p class="ghcard__authorname">Антон Долинин</p>
+                            <p class="ghcard__email">anton@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="ghcard__commit">You can install this plugin directly from NetBeans Plugin Portal:
+                        in&nbsp;NetBeans, open Tools &gt;
+                        Plugins &gt; Available plugins and find and install Emmet plugin..
+                    </p>
+                </li>
+                <li class="ghcard">
+                    <p class="ghcard_carddate">14 августа, 2019</p>
+                    <div class="ghcard__authorbox">
+                        <img src="<%=require('./images/gitava.jpg').default%>" class="ghcard__avatar" alt="Author foto">
+                        <div class="ghcard__textbox">
+                            <p class="ghcard__authorname">Антон Долинин</p>
+                            <p class="ghcard__email">anton@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="ghcard__commit">With Emmet, you can type CSS-like expressions
+                        that can be&nbsp;dynamically parsed, and produce
+                        output depending on&nbsp;what you type in&nbsp;the abb...
+                    </p>
+                </li>
+                <li class="ghcard">
+                    <p class="ghcard_carddate">14 августа, 2019</p>
+                    <div class="ghcard__authorbox">
+                        <img src="<%=require('./images/gitava.jpg').default%>" class="ghcard__avatar" alt="Author foto">
+                        <div class="ghcard__textbox">
+                            <p class="ghcard__authorname">Антон Долинин</p>
+                            <p class="ghcard__email">anton@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="ghcard__commit">With Emmet, you can type CSS-like expressions
+                        that can be&nbsp;dynamically parsed, and produce
+                        output depending on&nbsp;what you type in&nbsp;the abb...
+                    </p>
+                </li>
+                <li class="ghcard">
+                    <p class="ghcard_carddate">14 августа, 2019</p>
+                    <div class="ghcard__authorbox">
+                        <img src="<%=require('./images/gitava.jpg').default%>" class="ghcard__avatar" alt="Author foto">
+                        <div class="ghcard__textbox">
+                            <p class="ghcard__authorname">Антон Долинин</p>
+                            <p class="ghcard__email">anton@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="ghcard__commit">With Emmet, you can type CSS-like expressions
+                        that can be&nbsp;dynamically parsed, and produce
+                        output depending on&nbsp;what you type in&nbsp;the abb...
+                    </p>
+                </li>
+            </ul>
+            <div class="slider__navigation">
+                <span class="slider__nav"></span>
+                <span class="slider__nav slider__nav_active"></span>
+                <span class="slider__nav"></span>
+                <span class="slider__nav"></span>
+                <span class="slider__nav"></span>
+            </div>
+            <button class="gh__button" type="button">Открыть в GitHub</button>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__authorblock">&#169; 2020 Дмитрий Чиненов</p>
+            <nav class="footer__menublock">
+                <ul class="footer__menublock-links">
+                    <li class="footer__menu-elem">
+                        <a href="./index.html" class="footer__menu-link">Главная</a>
+                    </li>
+                    <li class="footer__menu-elem">
+                        <a href="./about.html" class="footer__menu-link">О проекте</a>
+                    </li>
+                    <li class="footer__menu-elem">
+                        <a target="_blank" href="https://praktikum.yandex.ru"
+                            class="footer__menu-link">Яндекс.Практикум</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="footer__socialblock">
+                <li class="footer__socialblock-link">
+                    <a target="_blank" href="https://github.com"
+                        class="footer__socialblock-elem footer__socialblock-elem_github"></a>
+                </li>
+                <li class="footer__socialblock-link">
+                    <a target="_blank" href="http://facebook.com"
+                        class="footer__socialblock-elem footer__socialblock-elem_fb"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.js %>">
+</body>
+
+</html>

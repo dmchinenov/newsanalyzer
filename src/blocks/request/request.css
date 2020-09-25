@@ -1,0 +1,25 @@
+@import url("./__data/data.css");
+@import url("./__data/_number/number.css");
+@import url("./__title/title.css");
+
+@media all and (min-width: 0px) {
+  .request {
+    margin: auto;
+    max-width: 1235px;
+    padding: 72px 0px 24px 0px;
+    max-width: 90%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .request {
+    padding: 0px 0px 40px 0px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .request {
+    max-width: 1235px;
+    padding: 0px 104px 80px 104px;
+  }
+}

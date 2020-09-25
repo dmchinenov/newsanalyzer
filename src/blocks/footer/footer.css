@@ -1,0 +1,16 @@
+@import url("./__authorblock/authorblock.css");
+@import url("./__container/container.css");
+@import url("./__menu-elem/menu-elem.css");
+@import url("./__menu-link/menu-link.css");
+@import url("./__menublock-links/menublock-links.css");
+@import url("./__menublock/menublock.css");
+@import url("./__socialblock-elem/socialblock-elem.css");
+@import url("./__socialblock-elem/_fb/fb.css");
+@import url("./__socialblock-elem/_github/github.css");
+@import url("./__socialblock-link/socialblock-link.css");
+@import url("./__socialblock/socialblock.css");
+
+.footer {
+  max-width: 100%;
+  max-height: 100%;
+}

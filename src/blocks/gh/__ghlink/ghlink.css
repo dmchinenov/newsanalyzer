@@ -1,0 +1,32 @@
+@media all and (min-width: 0px) {
+  .gh__ghlink {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    align-items: center;
+    text-align: right;
+    color: #1a1b22;
+    text-decoration: none;
+    margin: 0px;
+    display: none;
+  }
+  .gh__ghlink:after {
+    content: "";
+    width: 9px;
+    height: 14px;
+    margin: 0px 0px 0px 10px;
+    background-image: url(../../../images/strelka.svg);
+    display: none;
+  }
+}
+
+@media all and (min-width: 560px) {
+  .gh__ghlink {
+    display: flex;
+  }
+  .gh__ghlink:after {
+    display: flex;
+  }
+}

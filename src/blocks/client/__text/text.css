@@ -1,0 +1,18 @@
+@media all and (min-width: 0px) {
+  .client__text {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1a1b22;
+    margin: 0px;
+    padding-top: 16px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .client__text {
+    padding-top: 24px;
+  }
+}

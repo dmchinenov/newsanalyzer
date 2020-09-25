@@ -1,0 +1,14 @@
+@import url("./__container/container.css");
+@import url("./__photo/photo.css");
+@import url("./__text/text.css");
+@import url("./__textblock/textblock.css");
+@import url("./__title/title.css");
+
+@media all and (min-width: 0px) {
+  .author {
+    font-family: "Roboto", "Roboto Slab", Arial, Helvetica, sans-serif;
+    display: block;
+    background: #ffffff;
+    margin: auto;
+  }
+}
