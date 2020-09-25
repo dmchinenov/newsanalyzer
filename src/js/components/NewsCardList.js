@@ -11,15 +11,14 @@ export class NewsCardList {
 	}
 
 	renderCard(res) {
-		console.log(res)
 		let arr = res.articles.slice(this.startSumRender, this.finishSumRender);
 		arr.forEach((item) => {
 			this.container.appendChild(this.newsCard.createCard(item));
 		});
 		this.startSumRender = this.startSumRender + this.sumCardsForRender;
 		this.finishSumRender = this.finishSumRender + this.sumCardsForRender;
-		console.log(this.startSumRender, this.finishSumRender)
 	}
+
 	clearCardContainer() {
 		this.container.innerHTML = '';
 		this.startSumRender = 0;

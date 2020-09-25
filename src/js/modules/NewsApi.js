@@ -4,8 +4,8 @@
 // бросающий ошибку дальше с помощью Promise.reject или throw. Также классы NewsApi, GithubApi и DataStorage не должны взаимодействовать с DOM напрямую из своих методов.
 
 export class NewsApi {
-	constructor(NEWS_API_DATA, NEWS_API_URL, searchInput, dayTo, dayFrom) {
-		this.url = NEWS_API_URL;
+	constructor(NEWS_API_DATA, searchInput, dayTo, dayFrom) {
+		this.url = NEWS_API_DATA.apiUrl;
 		this.key = NEWS_API_DATA.apiKey;
 		this.lang = NEWS_API_DATA.apiLang;
 		this.sortby = NEWS_API_DATA.apiSortby;
@@ -29,7 +29,6 @@ export class NewsApi {
 		)
 			.then((res) => {
 				if (res.ok) {
-					console.log(this.dayTo, this.dayFrom)
 					return res.json();
 				}
 			})

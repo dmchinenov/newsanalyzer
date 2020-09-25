@@ -1,4 +1,37 @@
 
+// selectors
+export const SELECTORS = {
+	searchForm: document.querySelector('.search__form'),
+	searchError: document.querySelector('.search__error'),
+	searchInput: document.querySelector('.search__input'),
+	searchButton: document.querySelector('.search__button'),
+	preloader: document.querySelector('.preloader'),
+	notFound: document.querySelector('.infonotfound'),
+	cardContainer: document.querySelector('.main__cardcontainer'),
+	mainButton: document.querySelector('.main__button'),
+	newCardTemplate: document.querySelector('.cardtemplate'),
+	main: document.querySelector('.main'),
+}
+
+export const ABOUT_SELECTORS = {
+	slider: document.querySelector('.slider'),
+	cardContainer: document.querySelector('.slider__container'),
+	cardTemplate: document.querySelector('.ghcardtemplate'),
+	cardDate: document.querySelector('.ghcard__carddate'),
+	cardAvatar: document.querySelector('.ghcard__avatar'),
+	cardAuthorName: document.querySelector('.ghcard__authorname'),
+	cardEmail: document.querySelector('.ghcard__email'),
+	cardCommitText: document.querySelector('.ghcard__commit'),
+	ghLink: document.querySelector('.gh__ghlink'),
+}
+
+export const GH_API_DATA = {
+	apiUrl: 'https://api.github.com/repos/',
+	apiUser: 'dmchinenov/',
+	apiRep: 'newsanalyzer/commits',
+}
+
+// objects
 export const ERROR_MESSAGES = {
 	emptyinput: 'Нужно ввести ключевое слово',
 	errorlength: 'Должно быть от 3 до 30 символов',
@@ -10,32 +43,16 @@ export const NEWS_API_DATA = {
 	apiLang: 'ru',
 	apiSortby: 'publishedAt',
 	apiPageSize: 100,
-};
-
-export const NEWS_API_URL =
-	process.env.NODE_ENV === 'production'
+	apiUrl: process.env.NODE_ENV === 'production'
 		? 'https://nomoreparties.co/news/v2/everything?'
-		: 'https://newsapi.org/v2/everything?';
+		: 'https://newsapi.org/v2/everything?',
+};
 
 
 // other constants
 export const SUMM_CARDS_RENDER = 3;
-
-// selectors
-export const SELECTORS = {
-	searchForm: document.querySelector('.search__form'),
-	searchError: document.querySelector('.search__error'),
-	searchInput: document.querySelector('.search__input'),
-	searchButton: document.querySelector('.search__button'),
-	preloader: document.querySelector('.preloader'),
-	notFound: document.querySelector('.infonotfound'),
-	newCardTemplate: document.querySelector('.cardtemplate').content.querySelector(".card"),
-	cardContainer: document.querySelector('.main__cardcontainer'),
-	mainButton: document.querySelector('.main__button'),
-	main: document.querySelector('.main'),
-}
-
-export const mounths = {
+export const DAY_WEEKS = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+export const MOUNTHS = {
 	mounthsForIndex: {
 		'01': 'января',
 		'02': 'февраля',

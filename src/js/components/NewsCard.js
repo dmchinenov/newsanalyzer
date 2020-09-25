@@ -1,14 +1,14 @@
 import picturenotfound from '../../../src/images/picturenotfound.webp';
 
 export class NewsCard {
-	constructor(TEMPLATE, dateChanger) {
+	constructor(TEMPLATE, createDate) {
 		this.template = TEMPLATE;
-		this.dateChanger = dateChanger;
+		this.createDate = createDate;
 	}
 
 	createCard(obj) {
-		const card = this.template.cloneNode(true);
-		const date = this.dateChanger(obj.publishedAt.split('T')[0]);
+		const card = this.template.content.querySelector(".card").cloneNode(true);
+		const date = this.createDate.dateChanger(obj.publishedAt.split('T')[0]);
 		this.card = card;
 		if (obj.urlToImage == null) {
 			this.card.querySelector('.card__image').setAttribute('style', `background-image: url(${picturenotfound})`);
