@@ -1,7 +1,8 @@
+// Класс работает с датами. Получает необходимые числа, преобразует данные в нужный вид
+
 export class CreateDate {
-	constructor(dateFromWeek, dateToday, MOUNTHS) {
-		this.dateFromWeek = dateFromWeek;
-		this.dateToday = dateToday;
+	constructor(date, MOUNTHS) {
+		this.date = date;
 		this.dayChanger = this.dayExtract.bind(this);
 		this.mounthChanger = this.mounthExtract.bind(this);
 		this.yearChanger = this.yearExtract.bind(this);
@@ -9,15 +10,15 @@ export class CreateDate {
 	}
 
 	dayTo() {
-		this.dateFromWeek.setDate(this.dateFromWeek.getDate() - 1);
-		const dayFromWeek = this.dateFromWeek.toISOString().split('T')[0];
-		return dayFromWeek;
+		this.date.setDate(this.date.getDate());
+		const dayToday = this.date.toISOString().split('T')[0];
+		return dayToday;
 	}
 
 	dayFrom() {
-		this.dateToday.setDate(this.dateToday.getDate() - 7);
-		const dayToday = this.dateToday.toISOString().split('T')[0];
-		return dayToday;
+		this.date.setDate(this.date.getDate() - 6);
+		const dayFromWeek = this.date.toISOString().split('T')[0];
+		return dayFromWeek;
 	}
 
 	dateChanger(date) {

@@ -12,7 +12,7 @@
   }
 }
 .search__error_anim {
-  animation: vibro 0.5s linear;
+  animation: vibro 0.4s linear;
 }
 
 @media all and (min-width: 480px) {

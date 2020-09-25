@@ -2,9 +2,6 @@
 
 export class DataStorage {
     constructor() {
-        this.setItem = this.setItem.bind(this);
-        this.getItem = this.getItem.bind(this);
-        this.clear = this.clear.bind(this);
     }
 
     setItem(key, value) {

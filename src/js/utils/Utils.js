@@ -1,10 +1,8 @@
-// Вспомогательные функции должны быть в папке src/js/utils. Вспомогательные функции не относятся к каким-то конкретным классам — это часть функциональности,
-// которая может быть использована в разных местах. 
-// Например, это может быть функция форматирования даты или функция, работающая с массивом.
+// Вспомогательные функции
 
-// export const vibroError = ((elem) => {
-//     elem.classList.add("search__error_anim");
-//     elem.classList.remove("search__error_anim");
-//   });
-//   setTimeout(vibroError, 1);
+export const vibroError = ((elem) => {
+    elem.classList.add("search__error_anim");
+    setTimeout(() => { elem.classList.remove("search__error_anim"); }, 500);
+});
+
 

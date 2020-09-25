@@ -1,7 +1,8 @@
-// класс скрывает/отображает переданные элементы или блоки
+// Скрывает/отображает переданные элементы или блоки
 
 export class ShowHideDisabled {
-	constructor() {}
+	constructor() {
+	}
 
 	show(element) {
 		element.classList.remove('visually-hidden');

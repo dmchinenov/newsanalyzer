@@ -1,7 +1,5 @@
-// SearchInput. Конструктор класса принимает колбэк-функцию, исполняемую при сабмите формы поиска. В колбэк-функции описывается взаимодействие с API,
-// списком карточек и локальным браузерным хранилищем. Полученные от NewsAPI данные должны приводить к обновлению хранилища,
-// а список карточек отображать полученные данные на странице.
-// Кроме этого у класса SearchInput должны быть методы для валидации формы поиска и методы, управляющие работой кнопки сабмита.
+// Валидирует переданные инпуты, присваивает ошибки инпутам.
+import { vibroError } from "../../js/utils/Utils.js"
 
 export class Validation {
 	constructor(SEARCH_FORM, ERROR_MESSAGES, SEARCH_ERROR) {
@@ -37,6 +35,7 @@ export class Validation {
 		const input = this.form.querySelector('.search__input');
 		const valid = this.isValidate(input);
 		this.errorElem.textContent = input.validationMessage;
+		vibroError(this.errorElem)
 		return valid;
 	}
 

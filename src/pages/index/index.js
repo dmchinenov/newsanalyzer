@@ -15,19 +15,19 @@ import { SELECTORS, ERROR_MESSAGES, NEWS_API_DATA, SUMM_CARDS_RENDER, MOUNTHS } 
 
 
 (function () {
-	const dateFromWeek = new Date();
-	const dateToday = new Date();
-	const createDate = new CreateDate(dateFromWeek, dateToday, MOUNTHS);
+	const date = new Date();
+	const createDate = new CreateDate(date, MOUNTHS);
 	const showHideDisabled = new ShowHideDisabled();
 	const newsCard = new NewsCard(SELECTORS.newCardTemplate, createDate);
 	const dataStorage = new DataStorage();
 	const dayTo = createDate.dayTo();
 	const dayFrom = createDate.dayFrom();
+
 	const newsApi = new NewsApi(NEWS_API_DATA, SELECTORS.searchInput, dayTo, dayFrom);
 	const newsCardList = new NewsCardList(newsCard, SELECTORS.cardContainer, SUMM_CARDS_RENDER, SELECTORS.mainButton);
 	const validation = new Validation(SELECTORS.searchForm, ERROR_MESSAGES, SELECTORS.searchError);
 
-	// коллбэк при сабмите формы. Проверяет валидность формы, скрывает/открывает блоки, загружает и рендерит карточки
+	// коллбэк загрузки Карточек. Проверяет валидность формы, скрывает/открывает блоки, загружает и рендерит карточки
 	function submitSearchButton() {
 		if (validation.isFormValid(SELECTORS.searchForm)) {
 			showHideDisabled.disabled(SELECTORS.searchButton, true);

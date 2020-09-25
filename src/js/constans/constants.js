@@ -25,12 +25,6 @@ export const ABOUT_SELECTORS = {
 	ghLink: document.querySelector('.gh__ghlink'),
 }
 
-export const GH_API_DATA = {
-	apiUrl: 'https://api.github.com/repos/',
-	apiUser: 'dmchinenov/',
-	apiRep: 'newsanalyzer/commits',
-}
-
 // objects
 export const ERROR_MESSAGES = {
 	emptyinput: 'Нужно ввести ключевое слово',
@@ -48,6 +42,11 @@ export const NEWS_API_DATA = {
 		: 'https://newsapi.org/v2/everything?',
 };
 
+export const GH_API_DATA = {
+	apiUrl: 'https://api.github.com/repos/',
+	apiUser: 'dmchinenov',
+	apiRep: '/newsanalyzer/commits',
+}
 
 // other constants
 export const SUMM_CARDS_RENDER = 3;

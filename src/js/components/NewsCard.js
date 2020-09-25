@@ -1,5 +1,6 @@
-import picturenotfound from '../../../src/images/picturenotfound.webp';
+// Генерирует карточку новостей
 
+import picturenotfound from '../../../src/images/picturenotfound.webp';
 export class NewsCard {
 	constructor(TEMPLATE, createDate) {
 		this.template = TEMPLATE;

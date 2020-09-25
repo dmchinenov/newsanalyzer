@@ -1,4 +1,4 @@
-// NewsCardList. Класс списка карточек новостей.
+// Рендерит необходимое количество карточек в контейнер, очищает контейнер
 
 export class NewsCardList {
 	constructor(newsCard, container, sumCardsForRender) {
