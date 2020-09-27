@@ -1,3 +1,4 @@
+// Загружает данные от GitHub API
 
 export class GitHubApi {
     constructor(GH_API_DATA) {

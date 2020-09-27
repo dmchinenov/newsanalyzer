@@ -10,8 +10,10 @@ export class CreateDate {
 	}
 
 	dayTo() {
-		this.date.setDate(this.date.getDate());
-		const dayToday = this.date.toISOString().split('T')[0];
+		let dayToday = []
+		this.date.setDate(this.date.getDate() - 1);
+		dayToday.push(this.date.toISOString().split('T')[0]);
+		dayToday.push(this.date.getDay())
 		return dayToday;
 	}
 
@@ -39,7 +41,7 @@ export class CreateDate {
 
 	mounthExtract(date) {
 		let mounth = date.substr(5, 2).toString();
-		mounth = this.mounths.mounthsForIndex[mounth];
+		mounth = this.mounths[mounth];
 		return mounth;
 	}
 

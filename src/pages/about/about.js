@@ -15,7 +15,7 @@ Swiper.use([Navigation, Pagination]);
     const sliderContainer = document.querySelector(".slider");
     const cardContainer = document.querySelector(".slider__container")
     const date = new Date()
-    const createDate = new CreateDate(date, MOUNTHS);
+    const createDate = new CreateDate(date, MOUNTHS.mounthsForIndex);
     const gitHubApi = new GitHubApi(GH_API_DATA);
     const commitCard = new CommitCard(ABOUT_SELECTORS.cardTemplate, createDate)
     const commitCardList = new CommitCardList(commitCard, cardContainer, swiperInit)

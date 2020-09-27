@@ -1,4 +1,4 @@
-// DataStorage. Класс DataStorage предоставляет интерфейс для работы с локальным хранилищем браузера.
+// Взаимодействие с локальным хранилищем
 
 export class DataStorage {
     constructor() {

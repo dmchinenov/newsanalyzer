@@ -16,13 +16,12 @@ import { SELECTORS, ERROR_MESSAGES, NEWS_API_DATA, SUMM_CARDS_RENDER, MOUNTHS } 
 
 (function () {
 	const date = new Date();
-	const createDate = new CreateDate(date, MOUNTHS);
+	const createDate = new CreateDate(date, MOUNTHS.mounthsForIndex);
 	const showHideDisabled = new ShowHideDisabled();
 	const newsCard = new NewsCard(SELECTORS.newCardTemplate, createDate);
 	const dataStorage = new DataStorage();
-	const dayTo = createDate.dayTo();
+	const dayTo = createDate.dayTo()[0];
 	const dayFrom = createDate.dayFrom();
-
 	const newsApi = new NewsApi(NEWS_API_DATA, SELECTORS.searchInput, dayTo, dayFrom);
 	const newsCardList = new NewsCardList(newsCard, SELECTORS.cardContainer, SUMM_CARDS_RENDER, SELECTORS.mainButton);
 	const validation = new Validation(SELECTORS.searchForm, ERROR_MESSAGES, SELECTORS.searchError);
@@ -43,7 +42,7 @@ import { SELECTORS, ERROR_MESSAGES, NEWS_API_DATA, SUMM_CARDS_RENDER, MOUNTHS } 
 					showHideDisabled.hide(SELECTORS.preloader);
 				}
 				else {
-					dataStorage.setItem('resArray', res);
+					dataStorage.setItem('resObject', res);
 					dataStorage.setItem('keyWord', SELECTORS.searchInput.value);
 					showHideDisabled.hide(SELECTORS.preloader);
 					showHideDisabled.show(SELECTORS.main);
@@ -56,7 +55,7 @@ import { SELECTORS, ERROR_MESSAGES, NEWS_API_DATA, SUMM_CARDS_RENDER, MOUNTHS } 
 
 	// коллбэк кнопки подгрузки карточек
 	function submitMainButton() {
-		const res = dataStorage.getItem('resArray');
+		const res = dataStorage.getItem('resObject');
 		newsCardList.renderCard(res);
 		if (document.querySelectorAll('.card').length >= res.articles.length) {
 			showHideDisabled.hide(SELECTORS.mainButton);

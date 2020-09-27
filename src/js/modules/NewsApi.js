@@ -1,7 +1,4 @@
-// NewsApi. Отвечает за взаимодействие с NewsAPI. У класса есть конструктор, принимающий опции и единственный обязательный метод getNews.
-//getNews возвращает список новостей на основе запроса.
-//Методы getNews и getCommits возвращают промис, содержат в себе обработку ответа сервера и обязательный блок сatch,
-// бросающий ошибку дальше с помощью Promise.reject или throw. Также классы NewsApi, GithubApi и DataStorage не должны взаимодействовать с DOM напрямую из своих методов.
+// Загружает данные от NewsApi
 
 export class NewsApi {
 	constructor(NEWS_API_DATA, searchInput, dayTo, dayFrom) {
@@ -29,6 +26,8 @@ export class NewsApi {
 		)
 			.then((res) => {
 				if (res.ok) {
+					console.log(this.dayTo, this.dayFrom)
+
 					return res.json();
 				}
 			})
