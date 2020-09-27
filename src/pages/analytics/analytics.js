@@ -5,7 +5,6 @@ import "../analytics.css";
 import { Statistics } from "../../js/components/Statistics.js"
 import { DataStorage } from "../../js/modules/DataStorage.js"
 import { CreateDate } from "../../js/components/CreateDate.js"
-
 import { MOUNTHS, DAY_WEEKS } from '../../js/constans/constants.js';
 
 (function () {
@@ -15,54 +14,29 @@ import { MOUNTHS, DAY_WEEKS } from '../../js/constans/constants.js';
     const resObject = dataStorage.getItem("resObject");
     const createDate = new CreateDate(date, MOUNTHS.mounthsForAnalytics);
     const statistics = new Statistics(resObject, keyWord, createDate);
-    // присваиваем значения заголовкам
+    const statsItemDateElements = document.querySelectorAll(".stats__item-date");
+    const statsItemGraphElements = document.querySelectorAll(".stats__item-graph");
+
+    // Присваиваем значения заголовкам
     const requestTitle = document.querySelector(".request__title").textContent = `Вы спросили: «${keyWord}»`;
     const requestDataTotal = document.querySelector(".request__data_number-total").textContent = resObject.articles.length;
     const requestDataTitle = document.querySelector(".request__data_number-title").textContent = statistics.getResultsOnTitle();
     const statsHeaderMounth = document.querySelector(".stats__header-date").textContent = `ДАТА (${createDate.mounthExtract(date.toISOString().split('T')[0])})`;
-    const statsItemDate = document.querySelectorAll(".stats__item-date");
-    const statsItemGraph = document.querySelectorAll(".stats__item-graph");
-    // Получаем массив с датой и номером дня.
-    let arrDates = []
-    for (let i = 0; i <= 6; i++) {
-        arrDates.push(createDate.dayTo());
-    }
-    arrDates.reverse();
-    // console.log(arrDates)
 
-    // массив дней
-    const arrDays = []
-    arrDates.forEach((item) => {
-        arrDays.push(item[0].split('-')[2]);
-    })
-    // console.log(arrDays)
+    // Получаем массив из 7 последних дней в формате ["2020-09-20", 3], второй элемент - номер дня в неделе.
+    const arrDates = createDate.getArrDates();
 
-    // получаем количество новостей
-    let obj = {};
-    for (let i = 0; i < arrDates.length; i++) {
-        obj[i] = statistics.getSummRequest(arrDates[i][0])
-    };
-    console.log(obj)
+    // Получаем массив из 7 последних дней недели в формате ["20"]
+    const arrDays = createDate.getArrDays(arrDates);
 
-    for (let i = 0; i < statsItemDate.length; i++) {
-        statsItemDate.forEach((item) => {
-            item.textContent = arrDays[i];
-        })
-    }
+    // Получаем объект с количеством новостей по дням недели
+    const objNewsCurrentDay = statistics.getObjNewsCurrentDay(arrDates)
 
-    for (let i = 0; i < statsItemDate.length; i++) {
-        statsItemDate[i].textContent = arrDays[i] + ', ' + DAY_WEEKS[arrDates[i][1]]
-    }
+    // Устанвливаем колонке даты нужные значения (дату и день недели)
+    statistics.setDateToDaysColumn(statsItemDateElements, arrDays, arrDates, DAY_WEEKS);
 
-    for (let i = 0; i < statsItemGraph.length; i++) {
-        if (obj[i] == 0) {      
-        statsItemGraph[i].setAttribute("style", `width: 1%;`);
-        statsItemGraph[i].textContent = 0;
-        } else {
-        statsItemGraph[i].setAttribute("style", `width: ${obj[i]}%`);
-        statsItemGraph[i].textContent = obj[i];
-    }
-}
+    // Устанавливаем количество упоминаний в график статистики по дням
+    statistics.setRequestToGraph(statsItemGraphElements, objNewsCurrentDay)
 
 })();
 

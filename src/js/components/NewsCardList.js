@@ -10,6 +10,7 @@ export class NewsCardList {
 		this.finishSumRender = sumCardsForRender;
 	}
 
+	// Рендерим карточки по 3 штуки
 	renderCard(res) {
 		let arr = res.articles.slice(this.startSumRender, this.finishSumRender);
 		arr.forEach((item) => {
@@ -19,8 +20,11 @@ export class NewsCardList {
 		this.finishSumRender = this.finishSumRender + this.sumCardsForRender;
 	}
 
+	// Очищаем контейнер с карточками и сбрасываем счетчик отрендеренных карточек
 	clearCardContainer() {
-		this.container.innerHTML = '';
+		while (this.container.firstChild) {
+			this.container.removeChild(this.container.firstChild);
+		}
 		this.startSumRender = 0;
 		this.finishSumRender = this.sumCardsForRender;
 	}

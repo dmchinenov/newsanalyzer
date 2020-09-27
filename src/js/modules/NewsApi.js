@@ -12,7 +12,7 @@ export class NewsApi {
 		this.dayFrom = dayFrom;
 
 	}
-	// загружаем данные о пользователе
+	// Загрузка карточки
 	loadCard() {
 		return fetch(
 			`${this.url}` +
@@ -27,7 +27,6 @@ export class NewsApi {
 			.then((res) => {
 				if (res.ok) {
 					console.log(this.dayTo, this.dayFrom)
-
 					return res.json();
 				}
 			})

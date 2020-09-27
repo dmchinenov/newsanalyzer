@@ -2,10 +2,10 @@
 import { vibroError } from "../../js/utils/Utils.js"
 
 export class Validation {
-	constructor(SEARCH_FORM, ERROR_MESSAGES, SEARCH_ERROR) {
-		this.form = SEARCH_FORM;
+	constructor(searchForm, ERROR_MESSAGES, searchError) {
+		this.form = searchForm;
 		this.errorMessages = ERROR_MESSAGES;
-		this.errorElem = SEARCH_ERROR;
+		this.errorElem = searchError;
 	}
 
 	// Слушатель инпута

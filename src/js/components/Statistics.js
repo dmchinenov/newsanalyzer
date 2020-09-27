@@ -1,5 +1,4 @@
-// Statistics. Класс, отвечающий за логику работы графиков со статистикой на странице аналитики. Конструктор класса получает объект, 
-// содержащий текущее состояние локального браузерного хранилища.
+// Statistics. Класс, отвечающий за логику работы графиков со статистикой на странице аналитики. 
 
 export class Statistics {
     constructor(resObject, keyWord, createDate) {
@@ -8,33 +7,60 @@ export class Statistics {
         this.createDate = createDate;
     }
 
-    // Получаем количество упоминаний в заголовке
+    // Получаем число с количеством упоминаний в заголовке
     getResultsOnTitle() {
         let keyOnTitle = 0;
         this.resObject.articles.forEach((item) => {
-            const keyWord = this.keyWord;
-            if (item.title.toUpperCase().includes(keyWord.toUpperCase())) {
-                keyOnTitle++;
+            if (item.title) { // Проверяем, что заголовок существует и не возвращается null
+                if (item.title.toUpperCase().includes(this.keyWord.toUpperCase())) { // Учитываем результаты с регистром
+                    keyOnTitle++;
+                }
             }
         });
         return keyOnTitle;
     }
 
-    // Получаем количество новостей и упоминаний по дате
-    getSummRequest(date) {
-        let number = 0;
-        this.resObject.articles.forEach((item) => {
-            if (item.publishedAt.includes(date)) {
-                if (item.title.toUpperCase().includes(this.keyWord.toUpperCase())) {
-                    number++
+    // Получаем объект с количеством упоминаний по конкретной дате
+    getObjNewsCurrentDay(date) {
+        let object = {}
+        for (let i = 0; i < date.length; i++) {
+            let summ = 0;
+            this.resObject.articles.forEach((item) => {
+                if (item.publishedAt.includes(date[i][0])) { // Проверяем соответствие дате
+                    if (item.title) { // Проверяем, что заголовок существует и не возвращается null
+                        if (item.title.toUpperCase().includes(this.keyWord.toUpperCase())) { // Учитываем результаты с регистром
+                            // (!!!) Если хотим дополнительно учитывать упоминание в description, добавляем в проверку
+                            // выше -  || item.description.toUpperCase().includes(this.keyWord.toUpperCase()))
+                            summ = ++summ
+                        }
+                    }
                 }
-            }
-        });
-        return number;
+            });
+            object[i] = summ;
+        }
+        return object;
     }
 
-}
+    // Устанавливаем колонкам нужные даты и дни недели
+    setDateToDaysColumn(statsItemDateElements, arrDays, arrDates, DAYWEEKS) {
+        for (let i = 0; i < statsItemDateElements.length; i++) {
+            statsItemDateElements[i].textContent = arrDays[i] + ', ' + DAYWEEKS[arrDates[i][1]];
+        }
+    }
 
+    // Устанавливаем количество упоминаний в заголовках в график статистики по дням
+    setRequestToGraph(objGraphElements, objNewsCurrentDay) {
+        for (let i = 0; i < objGraphElements.length; i++) {
+            if (objNewsCurrentDay[i] == 0) {
+                objGraphElements[i].setAttribute("style", `width: 1%;`);
+                objGraphElements[i].textContent = 0;
+            } else {
+                objGraphElements[i].setAttribute("style", `width: ${objNewsCurrentDay[i] + 1}%`);
+                objGraphElements[i].textContent = objNewsCurrentDay[i];
+            }
+        }
+    }
+}
 
 
 

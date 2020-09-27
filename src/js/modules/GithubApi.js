@@ -6,6 +6,7 @@ export class GitHubApi {
         this.user = GH_API_DATA.apiUser;
         this.rep = GH_API_DATA.apiRep;
     }
+
     // загружаем данные о пользователе
     loadCommits() {
         return fetch(

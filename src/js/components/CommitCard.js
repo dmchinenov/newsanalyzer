@@ -6,6 +6,7 @@ export class CommitCard {
 		this.createDate = createDate;
 	}
 
+	// Создает экземпляр карточки коммита
 	createCard(obj) {
 		const card = this.template.content.querySelector(".ghcard").cloneNode(true);
 		const date = this.createDate.dateChanger(obj.commit.committer.date.split('T')[0]);

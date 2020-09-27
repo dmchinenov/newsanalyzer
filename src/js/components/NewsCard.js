@@ -1,12 +1,14 @@
 // Генерирует карточку новостей
 
 import picturenotfound from '../../../src/images/picturenotfound.webp';
+
 export class NewsCard {
-	constructor(TEMPLATE, createDate) {
-		this.template = TEMPLATE;
+	constructor(newCardTemplate, createDate) {
+		this.template = newCardTemplate;
 		this.createDate = createDate;
 	}
 
+	// Создает экземпляр карточки и присваивает ей значения из переданного объекта
 	createCard(obj) {
 		const card = this.template.content.querySelector(".card").cloneNode(true);
 		const date = this.createDate.dateChanger(obj.publishedAt.split('T')[0]);

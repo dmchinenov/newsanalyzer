@@ -1,18 +1,4 @@
 
-// selectors
-export const SELECTORS = {
-	searchForm: document.querySelector('.search__form'),
-	searchError: document.querySelector('.search__error'),
-	searchInput: document.querySelector('.search__input'),
-	searchButton: document.querySelector('.search__button'),
-	preloader: document.querySelector('.preloader'),
-	notFound: document.querySelector('.infonotfound'),
-	cardContainer: document.querySelector('.main__cardcontainer'),
-	mainButton: document.querySelector('.main__button'),
-	newCardTemplate: document.querySelector('.cardtemplate'),
-	main: document.querySelector('.main'),
-}
-
 export const ABOUT_SELECTORS = {
 	slider: document.querySelector('.slider'),
 	cardContainer: document.querySelector('.slider__container'),
