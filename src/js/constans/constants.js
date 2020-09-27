@@ -1,17 +1,5 @@
 
-export const ABOUT_SELECTORS = {
-	slider: document.querySelector('.slider'),
-	cardContainer: document.querySelector('.slider__container'),
-	cardTemplate: document.querySelector('.ghcardtemplate'),
-	cardDate: document.querySelector('.ghcard__carddate'),
-	cardAvatar: document.querySelector('.ghcard__avatar'),
-	cardAuthorName: document.querySelector('.ghcard__authorname'),
-	cardEmail: document.querySelector('.ghcard__email'),
-	cardCommitText: document.querySelector('.ghcard__commit'),
-	ghLink: document.querySelector('.gh__ghlink'),
-}
 
-// objects
 export const ERROR_MESSAGES = {
 	emptyinput: 'Нужно ввести ключевое слово',
 	errorlength: 'Должно быть от 3 до 30 символов',
@@ -34,7 +22,6 @@ export const GH_API_DATA = {
 	apiRep: '/newsanalyzer/commits',
 }
 
-// other constants
 export const SUMM_CARDS_RENDER = 3;
 export const DAY_WEEKS = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
 export const MOUNTHS = {

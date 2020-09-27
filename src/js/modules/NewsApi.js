@@ -26,7 +26,6 @@ export class NewsApi {
 		)
 			.then((res) => {
 				if (res.ok) {
-					console.log(this.dayTo, this.dayFrom)
 					return res.json();
 				}
 			})

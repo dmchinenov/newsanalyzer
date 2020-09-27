@@ -25,7 +25,6 @@ import { ERROR_MESSAGES, NEWS_API_DATA, SUMM_CARDS_RENDER, MOUNTHS } from '../..
 	const mainButton = document.querySelector('.main__button');
 	const newCardTemplate = document.querySelector('.cardtemplate');
 	const main = document.querySelector('.main');
-
 	const date = new Date();
 	const createDate = new CreateDate(date, MOUNTHS.mounthsForIndex);
 	const showHideDisabled = new ShowHideDisabled();
@@ -37,7 +36,6 @@ import { ERROR_MESSAGES, NEWS_API_DATA, SUMM_CARDS_RENDER, MOUNTHS } from '../..
 	const newsCardList = new NewsCardList(newsCard, cardContainer, SUMM_CARDS_RENDER, mainButton);
 	const validation = new Validation(searchForm, ERROR_MESSAGES, searchError);
 
-
 	// Проверяем наличие ключа и объекта в localStorage
 	function checkLocalStorage() {
 		if (dataStorage.getItem("keyWord") && dataStorage.getItem("resObject")) {
@@ -47,20 +45,7 @@ import { ERROR_MESSAGES, NEWS_API_DATA, SUMM_CARDS_RENDER, MOUNTHS } from '../..
 		}
 	}
 
-	// Функция рендера данных из localStorage
-	function loadCardFromLocalStorage() {
-		if (checkLocalStorage()) {
-			console.log('yes')
-			searchInput.value = dataStorage.getItem("keyWord");
-			let obj = dataStorage.getItem("resObject");
-			showHideDisabled.show(main);
-			newsCardList.renderCard(obj);
-		}
-	}
-
-	loadCardFromLocalStorage()
-
-	// коллбэк загрузки Карточек. Проверяет валидность формы, скрывает/открывает блоки, загружает и рендерит карточки
+	// Коллбэк загрузки Карточек. Проверяет валидность формы, скрывает/открывает блоки, загружает и рендерит карточки
 	function submitSearchButton() {
 		if (validation.isFormValid(searchForm)) {
 			showHideDisabled.disabled(searchButton, true);
@@ -94,12 +79,21 @@ import { ERROR_MESSAGES, NEWS_API_DATA, SUMM_CARDS_RENDER, MOUNTHS } from '../..
 		}
 	}
 
-	// коллбэк кнопки подгрузки карточек
-	function submitMainButton() {
+	// Функция подгрузки карточек
+	function renderCardFromLocalStorage() {
 		const res = dataStorage.getItem('resObject');
 		newsCardList.renderCard(res);
 		if (document.querySelectorAll('.card').length >= res.articles.length) {
 			showHideDisabled.hide(mainButton);
+		}
+	}
+
+	// Функция при загрузке главной страницы
+	function openMainPage() {
+		if (checkLocalStorage()) {
+			searchInput.value = dataStorage.getItem("keyWord");
+			showHideDisabled.show(main);
+			renderCardFromLocalStorage()
 		}
 	}
 
@@ -114,9 +108,9 @@ import { ERROR_MESSAGES, NEWS_API_DATA, SUMM_CARDS_RENDER, MOUNTHS } from '../..
 
 	// слушатель кнопки подгрузки новостей
 	mainButton.addEventListener('click', function () {
-		submitMainButton()
+		renderCardFromLocalStorage()
 	});
 
-
+	openMainPage()
 
 })();

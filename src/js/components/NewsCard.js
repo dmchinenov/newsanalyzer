@@ -1,5 +1,4 @@
 // Генерирует карточку новостей
-
 import picturenotfound from '../../../src/images/picturenotfound.webp';
 
 export class NewsCard {

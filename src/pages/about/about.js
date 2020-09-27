@@ -16,7 +16,6 @@ Swiper.use([Navigation, Pagination]);
     const cardTemplate = document.querySelector('.ghcardtemplate');
     const ghLink = document.querySelector('.gh__ghlink');
     const sliderContainer = document.querySelector(".slider");
-
     const date = new Date();
     const createDate = new CreateDate(date, MOUNTHS.mounthsForIndex);
     const gitHubApi = new GitHubApi(GH_API_DATA);
@@ -41,10 +40,14 @@ Swiper.use([Navigation, Pagination]);
         })
     }
 
-    gitHubApi.loadCommits().then((res) => {
-        commitCardList.renderCard(res)
-        ghLink.href = `https://github.com/${GH_API_DATA.apiUser}`;
-    });
+    gitHubApi.loadCommits()
+        .then((res) => {
+            commitCardList.renderCard(res)
+            ghLink.href = `https://github.com/${GH_API_DATA.apiUser}`;
+        })
+        .catch((err) => {
+            console.log(`Произошла ошибка: ${err.status}`)
+        });
 
 
 })();
