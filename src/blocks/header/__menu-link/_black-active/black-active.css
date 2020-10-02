@@ -12,8 +12,14 @@
   }
 }
 
-@media all and (min-width: 1280px) {
+@media all and (min-width: 1024px) {
   .header__menu-link_black-active {
     padding-bottom: 23px;
   }
 }
+
+.header__menu-link_black-active:hover {
+  color: black;
+  transition: 0.2s ease;
+}
+

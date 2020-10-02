@@ -1,3 +1,8 @@
-.request__data_number {
+.request__data_number-title {
   font-weight: bold;
 }
+
+.request__data_number-total {
+  font-weight: bold;
+}
+

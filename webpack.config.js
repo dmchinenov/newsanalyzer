@@ -65,15 +65,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: false,
-      template: "./src/about.html",
-      chunks: ["about"],
-      filename: "about.html",
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
       template: "./src/index.html",
       chunks: ["index"],
       filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: "./src/about.html",
+      chunks: ["about"],
+      filename: "about.html",
     }),
     new HtmlWebpackPlugin({
       inject: false,
